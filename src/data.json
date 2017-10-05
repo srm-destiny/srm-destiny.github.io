@@ -1,0 +1,1950 @@
+{
+    "zero":{
+        "weapons": {
+            "autos": {
+                "high": {
+                    "name": "High-Impact",
+                    "optimal": "1.17",
+                    "ostk": "6 Crit 2 Body",
+                    "body": "1.50",
+                    "bstk": "10 Body"
+                },
+                "medium": {
+                    "name": "Precision",
+                    "optimal": "1.07",
+                    "ostk": "6 Crit 3 Body",
+                    "body": "1.47",
+                    "bstk": "12 Body"
+                },
+                "low": {
+                    "name": "Adaptive",
+                    "optimal": "1.00",
+                    "ostk": "11 Crit",
+                    "body": "1.40",
+                    "bstk": "15 Body"
+                },
+                "lowest": {
+                    "name": "Rapid-Fire",
+                    "optimal": "1.10",
+                    "ostk": "9 Crit 5 Body",
+                    "body": "1.27",
+                    "bstk": "16 Body"
+                }
+            },
+            "scouts": {
+                "high": {
+                    "name": "High-Impact",
+                    "optimal": "1.20",
+                    "ostk": "3 Crit 1 Body",
+                    "body": "2.00",
+                    "bstk": "6 Body"
+                },
+                "medium": {
+                    "name": "Precision",
+                    "optimal": "1.00",
+                    "ostk": "4 Crit",
+                    "body": "1.67",
+                    "bstk": "6 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "1.20",
+                    "ostk": "3 Crit 2 Body",
+                    "body": "1.80",
+                    "bstk": "7 Body"
+                },
+                "lowest": {
+                    "name": "Veist Rapid-Fire",
+                    "optimal": "1.17",
+                    "ostk": "4 Crit 2 Body",
+                    "body": "1.87",
+                    "bstk": "9 Body"
+                }
+            },
+            "pulses": {
+                "high": {
+                    "name": "High-Impact",
+                    "optimal": "1.20",
+                    "ostk": "6 Crit 2 Body",
+                    "body": "1.83",
+                    "bstk": "12 Body"
+                },
+                "medium": {
+                    "name": "Adaptive",
+                    "optimal": "1.13",
+                    "ostk": "7 Crit 2 Body",
+                    "body": "2.00",
+                    "bstk": "13 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "1.20",
+                    "ostk": "8 Crit 2 Body",
+                    "body": "1.67",
+                    "bstk": "14 Body"
+                },
+                "lowest": {
+                    "name": "Rapid-Fire",
+                    "optimal": "1.07",
+                    "ostk": "9 Crit 2 Body",
+                    "body": "1.47",
+                    "bstk": "15 Body"
+                }
+            },
+            "handcannons": {
+                "high": {
+                    "name": "Aggressive",
+                    "optimal": "1.07",
+                    "ostk": "2 Crit 1 Body",
+                    "body": "1.60",
+                    "bstk": "4 Body"
+                },
+                "medium": {
+                    "name": "Adaptive",
+                    "optimal": "1.30",
+                    "ostk": "1 Crit 3 Body",
+                    "body": "1.73",
+                    "bstk": "5 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "1.20",
+                    "ostk": "2 Crit 2 Body",
+                    "body": "1.60",
+                    "bstk": "5 Body"
+                }
+            },
+            "sidearms": {
+                "high": {
+                    "name": "Precision",
+                    "optimal": "0.93",
+                    "ostk": "4 Crit 1 Body",
+                    "body": "1.40",
+                    "bstk": "7 Body"
+                },
+                "medium": {
+                    "name": "Adaptive",
+                    "optimal": "0.80",
+                    "ostk": "5 Crit",
+                    "body": "1.20",
+                    "bstk": "7 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "0.83",
+                    "ostk": "5 Crit 1 Body",
+                    "body": "1.50",
+                    "bstk": "9 Body"
+                },
+                "burst": {
+                    "name": "Omolon Burst",
+                    "optimal": "0.73",
+                    "ostk": "5 Crit 3 Body",
+                    "body": "1.00",
+                    "bstk": "10 Body"
+                },
+                "rapid": {
+                    "name": "SUROS Rapid-Fire",
+                    "optimal": "0.60",
+                    "ostk": "7 Crit",
+                    "body": "1.20",
+                    "bstk": "10 Body"
+                }
+            },
+            "smgs": {
+                "high": {
+                    "name": "Precision",
+                    "optimal": "0.90",
+                    "ostk": "7 Crit 3 Body",
+                    "body": "1.10",
+                    "bstk": "12 Body"
+                },
+                "medium": {
+                    "name": "Lightweight",
+                    "optimal": "0.87",
+                    "ostk": "11 Crit 3 Body",
+                    "body": "1.07",
+                    "bstk": "17 Body"
+                },
+                "low": {
+                    "name": "Adaptive",
+                    "optimal": "0.93",
+                    "ostk": "10 Crit 5 Body",
+                    "body": "1.00",
+                    "bstk": "16 Body"
+                }
+            }
+        }
+    },
+    "one":{
+        "weapons": {
+            "autos": {
+                "high": {
+                    "name": "High-Impact",
+                    "optimal": "1.17",
+                    "ostk": "6 Crit 2 Body",
+                    "body": "1.50",
+                    "bstk": "10 Body"
+                },
+                "medium": {
+                    "name": "Precision",
+                    "optimal": "1.07",
+                    "ostk": "6 Crit 3 Body",
+                    "body": "1.47",
+                    "bstk": "12 Body"
+                },
+                "low": {
+                    "name": "Adaptive",
+                    "optimal": "1.00",
+                    "ostk": "11 Crit",
+                    "body": "1.40",
+                    "bstk": "15 Body"
+                },
+                "lowest": {
+                    "name": "Rapid-Fire",
+                    "optimal": "1.10",
+                    "ostk": "10 Crit 4 Body",
+                    "body": "1.27",
+                    "bstk": "16 Body"
+                }
+            },
+            "scouts": {
+                "high": {
+                    "name": "High-Impact",
+                    "optimal": "1.20",
+                    "ostk": "3 Crit 1 Body",
+                    "body": "2.00",
+                    "bstk": "6 Body"
+                },
+                "medium": {
+                    "name": "Precision",
+                    "optimal": "1.00",
+                    "ostk": "4 Crit",
+                    "body": "1.67",
+                    "bstk": "6 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "1.20",
+                    "ostk": "3 Crit 2 Body",
+                    "body": "1.80",
+                    "bstk": "7 Body"
+                },
+                "lowest": {
+                    "name": "Veist Rapid-Fire",
+                    "optimal": "1.17",
+                    "ostk": "4 Crit 2 Body",
+                    "body": "1.87",
+                    "bstk": "9 Body"
+                }
+            },
+            "pulses": {
+                "high": {
+                    "name": "High-Impact",
+                    "optimal": "1.20",
+                    "ostk": "6 Crit 2 Body",
+                    "body": "1.83",
+                    "bstk": "12 Body"
+                },
+                "medium": {
+                    "name": "Adaptive",
+                    "optimal": "1.13",
+                    "ostk": "7 Crit 2 Body",
+                    "body": "2.00",
+                    "bstk": "13 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "1.20",
+                    "ostk": "8 Crit 2 Body",
+                    "body": "1.67",
+                    "bstk": "14 Body"
+                },
+                "lowest": {
+                    "name": "Rapid-Fire",
+                    "optimal": "1.07",
+                    "ostk": "9 Crit 2 Body",
+                    "body": "1.47",
+                    "bstk": "15 Body"
+                }
+            },
+            "handcannons": {
+                "high": {
+                    "name": "Aggressive",
+                    "optimal": "1.07",
+                    "ostk": "2 Crit 1 Body",
+                    "body": "1.60",
+                    "bstk": "4 Body"
+                },
+                "medium": {
+                    "name": "Adaptive",
+                    "optimal": "1.30",
+                    "ostk": "1 Crit 3 Body",
+                    "body": "1.73",
+                    "bstk": "5 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "1.20",
+                    "ostk": "2 Crit 2 Body",
+                    "body": "1.60",
+                    "bstk": "5 Body"
+                }
+            },
+            "sidearms": {
+                "high": {
+                    "name": "Precision",
+                    "optimal": "0.93",
+                    "ostk": "4 Crit 1 Body",
+                    "body": "1.40",
+                    "bstk": "7 Body"
+                },
+                "medium": {
+                    "name": "Adaptive",
+                    "optimal": "0.80",
+                    "ostk": "5 Crit",
+                    "body": "1.20",
+                    "bstk": "7 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "0.83",
+                    "ostk": "5 Crit 1 Body",
+                    "body": "1.50",
+                    "bstk": "9 Body"
+                },
+                "burst": {
+                    "name": "Omolon Burst",
+                    "optimal": "0.73",
+                    "ostk": "5 Crit 3 Body",
+                    "body": "1.00",
+                    "bstk": "10 Body"
+                },
+                "rapid": {
+                    "name": "SUROS Rapid-Fire",
+                    "optimal": "0.60",
+                    "ostk": "7 Crit",
+                    "body": "1.20",
+                    "bstk": "10 Body"
+                }
+            },
+            "smgs": {
+                "high": {
+                    "name": "Precision",
+                    "optimal": "0.90",
+                    "ostk": "7 Crit 3 Body",
+                    "body": "1.10",
+                    "bstk": "12 Body"
+                },
+                "medium": {
+                    "name": "Lightweight",
+                    "optimal": "0.87",
+                    "ostk": "12 Crit 2 Body",
+                    "body": "1.13",
+                    "bstk": "18 Body"
+                },
+                "low": {
+                    "name": "Adaptive",
+                    "optimal": "0.93",
+                    "ostk": "11 Crit 4 Body",
+                    "body": "1.00",
+                    "bstk": "16 Body"
+                }
+            }
+        }
+    },
+    "two":{
+        "weapons": {
+            "autos": {
+                "high": {
+                    "name": "High-Impact",
+                    "optimal": "1.17",
+                    "ostk": "6 Crit 2 Body",
+                    "body": "1.50",
+                    "bstk": "10 Body"
+                },
+                "medium": {
+                    "name": "Precision",
+                    "optimal": "1.07",
+                    "ostk": "7 Crit 2 Body",
+                    "body": "1.47",
+                    "bstk": "12 Body"
+                },
+                "low": {
+                    "name": "Adaptive",
+                    "optimal": "1.10",
+                    "ostk": "9 Crit 3 Body",
+                    "body": "1.40",
+                    "bstk": "15 Body"
+                },
+                "lowest": {
+                    "name": "Rapid-Fire",
+                    "optimal": "1.10",
+                    "ostk": "11 Crit 3 Body",
+                    "body": "1.27",
+                    "bstk": "16 Body"
+                }
+            },
+            "scouts": {
+                "high": {
+                    "name": "High-Impact",
+                    "optimal": "1.20",
+                    "ostk": "3 Crit 1 Body",
+                    "body": "2.00",
+                    "bstk": "6 Body"
+                },
+                "medium": {
+                    "name": "Precision",
+                    "optimal": "1.00",
+                    "ostk": "4 Crit",
+                    "body": "1.67",
+                    "bstk": "6 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "1.20",
+                    "ostk": "3 Crit 2 Body",
+                    "body": "1.80",
+                    "bstk": "7 Body"
+                },
+                "lowest": {
+                    "name": "Veist Rapid-Fire",
+                    "optimal": "1.17",
+                    "ostk": "5 Crit 1 Body",
+                    "body": "1.87",
+                    "bstk": "9 Body"
+                }
+            },
+            "pulses": {
+                "high": {
+                    "name": "High-Impact",
+                    "optimal": "1.20",
+                    "ostk": "7 Crit 1 Body",
+                    "body": "1.83",
+                    "bstk": "12 Body"
+                },
+                "medium": {
+                    "name": "Adaptive",
+                    "optimal": "1.13",
+                    "ostk": "7 Crit 2 Body",
+                    "body": "2.00",
+                    "bstk": "13 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "1.20",
+                    "ostk": "9 Crit 1 Body",
+                    "body": "1.67",
+                    "bstk": "14 Body"
+                },
+                "lowest": {
+                    "name": "Rapid-Fire",
+                    "optimal": "1.07",
+                    "ostk": "10 Crit 1 Body",
+                    "body": "1.47",
+                    "bstk": "15 Body"
+                }
+            },
+            "handcannons": {
+                "high": {
+                    "name": "Aggressive",
+                    "optimal": "1.07",
+                    "ostk": "3 Crit",
+                    "body": "2.13",
+                    "bstk": "5 Body"
+                },
+                "medium": {
+                    "name": "Adaptive",
+                    "optimal": "1.30",
+                    "ostk": "1 Crit 3 Body",
+                    "body": "1.73",
+                    "bstk": "5 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "1.20",
+                    "ostk": "2 Crit 2 Body",
+                    "body": "1.60",
+                    "bstk": "5 Body"
+                }
+            },
+            "sidearms": {
+                "high": {
+                    "name": "Precision",
+                    "optimal": "0.93",
+                    "ostk": "4 Crit 1 Body",
+                    "body": "1.40",
+                    "bstk": "7 Body"
+                },
+                "medium": {
+                    "name": "Adaptive",
+                    "optimal": "0.80",
+                    "ostk": "5 Crit",
+                    "body": "1.20",
+                    "bstk": "7 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "0.83",
+                    "ostk": "5 Crit 1 Body",
+                    "body": "1.50",
+                    "bstk": "9 Body"
+                },
+                "burst": {
+                    "name": "Omolon Burst",
+                    "optimal": "0.73",
+                    "ostk": "5 Crit 3 Body",
+                    "body": "1.00",
+                    "bstk": "10 Body"
+                },
+                "rapid": {
+                    "name": "SUROS Rapid-Fire",
+                    "optimal": "0.93",
+                    "ostk": "5 Crit 3 Body",
+                    "body": "1.20",
+                    "bstk": "10 Body"
+                }
+            },
+            "smgs": {
+                "high": {
+                    "name": "Precision",
+                    "optimal": "0.90",
+                    "ostk": "8 Crit 2 Body",
+                    "body": "1.10",
+                    "bstk": "12 Body"
+                },
+                "medium": {
+                    "name": "Lightweight",
+                    "optimal": "0.87",
+                    "ostk": "12 Crit 2 Body",
+                    "body": "1.13",
+                    "bstk": "18 Body"
+                },
+                "low": {
+                    "name": "Adaptive",
+                    "optimal": "0.93",
+                    "ostk": "12 Crit 3 Body",
+                    "body": "1.00",
+                    "bstk": "16 Body"
+                }
+            }
+        }
+    },
+    "three":{
+        "weapons": {
+            "autos": {
+                "high": {
+                    "name": "High-Impact",
+                    "optimal": "1.17",
+                    "ostk": "7 Crit 1 Body",
+                    "body": "1.50",
+                    "bstk": "10 Body"
+                },
+                "medium": {
+                    "name": "Precision",
+                    "optimal": "1.07",
+                    "ostk": "7 Crit 2 Body",
+                    "body": "1.47",
+                    "bstk": "12 Body"
+                },
+                "low": {
+                    "name": "Adaptive",
+                    "optimal": "1.10",
+                    "ostk": "9 Crit 3 Body",
+                    "body": "1.40",
+                    "bstk": "15 Body"
+                },
+                "lowest": {
+                    "name": "Rapid-Fire",
+                    "optimal": "1.10",
+                    "ostk": "12 Crit 2 Body",
+                    "body": "1.27",
+                    "bstk": "16 Body"
+                }
+            },
+            "scouts": {
+                "high": {
+                    "name": "High-Impact",
+                    "optimal": "1.20",
+                    "ostk": "3 Crit 1 Body",
+                    "body": "2.00",
+                    "bstk": "6 Body"
+                },
+                "medium": {
+                    "name": "Precision",
+                    "optimal": "1.00",
+                    "ostk": "4 Crit",
+                    "body": "1.67",
+                    "bstk": "6 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "1.20",
+                    "ostk": "3 Crit 2 Body",
+                    "body": "1.80",
+                    "bstk": "7 Body"
+                },
+                "lowest": {
+                    "name": "Veist Rapid-Fire",
+                    "optimal": "1.17",
+                    "ostk": "5 Crit 1 Body",
+                    "body": "1.87",
+                    "bstk": "9 Body"
+                }
+            },
+            "pulses": {
+                "high": {
+                    "name": "High-Impact",
+                    "optimal": "1.20",
+                    "ostk": "7 Crit 1 Body",
+                    "body": "1.83",
+                    "bstk": "12 Body"
+                },
+                "medium": {
+                    "name": "Adaptive",
+                    "optimal": "1.13",
+                    "ostk": "8 Crit 1 Body",
+                    "body": "2.00",
+                    "bstk": "13 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "1.20",
+                    "ostk": "9 Crit 1 Body",
+                    "body": "1.67",
+                    "bstk": "14 Body"
+                },
+                "lowest": {
+                    "name": "Rapid-Fire",
+                    "optimal": "1.07",
+                    "ostk": "10 Crit 1 Body",
+                    "body": "1.47",
+                    "bstk": "15 Body"
+                }
+            },
+            "handcannons": {
+                "high": {
+                    "name": "Aggressive",
+                    "optimal": "1.07",
+                    "ostk": "3 Crit",
+                    "body": "2.13",
+                    "bstk": "5 Body"
+                },
+                "medium": {
+                    "name": "Adaptive",
+                    "optimal": "1.30",
+                    "ostk": "1 Crit 3 Body",
+                    "body": "1.73",
+                    "bstk": "5 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "1.20",
+                    "ostk": "2 Crit 2 Body",
+                    "body": "1.60",
+                    "bstk": "5 Body"
+                }
+            },
+            "sidearms": {
+                "high": {
+                    "name": "Precision",
+                    "optimal": "0.93",
+                    "ostk": "4 Crit 1 Body",
+                    "body": "1.40",
+                    "bstk": "7 Body"
+                },
+                "medium": {
+                    "name": "Adaptive",
+                    "optimal": "1.00",
+                    "ostk": "2 Crit 4 Body",
+                    "body": "1.20",
+                    "bstk": "7 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "0.83",
+                    "ostk": "5 Crit 1 Body",
+                    "body": "1.50",
+                    "bstk": "9 Body"
+                },
+                "burst": {
+                    "name": "Omolon Burst",
+                    "optimal": "0.73",
+                    "ostk": "6 Crit 2 Body",
+                    "body": "1.00",
+                    "bstk": "10 Body"
+                },
+                "rapid": {
+                    "name": "SUROS Rapid-Fire",
+                    "optimal": "0.93",
+                    "ostk": "5 Crit 3 Body",
+                    "body": "1.20",
+                    "bstk": "10 Body"
+                }
+            },
+            "smgs": {
+                "high": {
+                    "name": "Precision",
+                    "optimal": "0.90",
+                    "ostk": "8 Crit 2 Body",
+                    "body": "1.10",
+                    "bstk": "12 Body"
+                },
+                "medium": {
+                    "name": "Lightweight",
+                    "optimal": "0.87",
+                    "ostk": "13 Crit 1 Body",
+                    "body": "1.13",
+                    "bstk": "18 Body"
+                },
+                "low": {
+                    "name": "Adaptive",
+                    "optimal": "0.93",
+                    "ostk": "13 Crit 2 Body",
+                    "body": "1.00",
+                    "bstk": "16 Body"
+                }
+            }
+        }
+    },
+    "four":{
+        "weapons": {
+            "autos": {
+                "high": {
+                    "name": "High-Impact",
+                    "optimal": "1.17",
+                    "ostk": "7 Crit 1 Body",
+                    "body": "1.50",
+                    "bstk": "10 Body"
+                },
+                "medium": {
+                    "name": "Precision",
+                    "optimal": "1.07",
+                    "ostk": "8 Crit 1 Body",
+                    "body": "1.60",
+                    "bstk": "13 Body"
+                },
+                "low": {
+                    "name": "Adaptive",
+                    "optimal": "1.10",
+                    "ostk": "10 Crit 2 Body",
+                    "body": "1.40",
+                    "bstk": "15 Body"
+                },
+                "lowest": {
+                    "name": "Rapid-Fire",
+                    "optimal": "1.10",
+                    "ostk": "13 Crit 1 Body",
+                    "body": "1.27",
+                    "bstk": "16 Body"
+                }
+            },
+            "scouts": {
+                "high": {
+                    "name": "High-Impact",
+                    "optimal": "1.20",
+                    "ostk": "4 Crit",
+                    "body": "2.00",
+                    "bstk": "6 Body"
+                },
+                "medium": {
+                    "name": "Precision",
+                    "optimal": "1.33",
+                    "ostk": "3 Crit 2 Body",
+                    "body": "1.67",
+                    "bstk": "6 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "1.20",
+                    "ostk": "4 Crit 1 Body",
+                    "body": "1.80",
+                    "bstk": "7 Body"
+                },
+                "lowest": {
+                    "name": "Veist Rapid-Fire",
+                    "optimal": "1.17",
+                    "ostk": "5 Crit 1 Body",
+                    "body": "1.87",
+                    "bstk": "9 Body"
+                }
+            },
+            "pulses": {
+                "high": {
+                    "name": "High-Impact",
+                    "optimal": "1.20",
+                    "ostk": "7 Crit 1 Body",
+                    "body": "2.27",
+                    "bstk": "13 Body"
+                },
+                "medium": {
+                    "name": "Adaptive",
+                    "optimal": "1.13",
+                    "ostk": "8 Crit 1 Body",
+                    "body": "2.00",
+                    "bstk": "13 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "1.20",
+                    "ostk": "9 Crit 1 Body",
+                    "body": "1.67",
+                    "bstk": "14 Body"
+                },
+                "lowest": {
+                    "name": "Rapid-Fire",
+                    "optimal": "1.07",
+                    "ostk": "11 Crit",
+                    "body": "1.47",
+                    "bstk": "15 Body"
+                }
+            },
+            "handcannons": {
+                "high": {
+                    "name": "Aggressive",
+                    "optimal": "1.07",
+                    "ostk": "3 Crit",
+                    "body": "2.13",
+                    "bstk": "5 Body"
+                },
+                "medium": {
+                    "name": "Adaptive",
+                    "optimal": "1.30",
+                    "ostk": "1 Crit 3 Body",
+                    "body": "1.73",
+                    "bstk": "5 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "1.20",
+                    "ostk": "2 Crit 2 Body",
+                    "body": "1.60",
+                    "bstk": "5 Body"
+                }
+            },
+            "sidearms": {
+                "high": {
+                    "name": "Precision",
+                    "optimal": "0.93",
+                    "ostk": "4 Crit 1 Body",
+                    "body": "1.40",
+                    "bstk": "7 Body"
+                },
+                "medium": {
+                    "name": "Adaptive",
+                    "optimal": "1.00",
+                    "ostk": "3 Crit 3 Body",
+                    "body": "1.20",
+                    "bstk": "7 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "0.83",
+                    "ostk": "6 Crit",
+                    "body": "1.50",
+                    "bstk": "9 Body"
+                },
+                "burst": {
+                    "name": "Omolon Burst",
+                    "optimal": "0.73",
+                    "ostk": "6 Crit 2 Body",
+                    "body": "1.00",
+                    "bstk": "10 Body"
+                },
+                "rapid": {
+                    "name": "SUROS Rapid-Fire",
+                    "optimal": "0.93",
+                    "ostk": "5 Crit 3 Body",
+                    "body": "1.20",
+                    "bstk": "10 Body"
+                }
+            },
+            "smgs": {
+                "high": {
+                    "name": "Precision",
+                    "optimal": "0.90",
+                    "ostk": "9 Crit 1 Body",
+                    "body": "1.20",
+                    "bstk": "13 Body"
+                },
+                "medium": {
+                    "name": "Lightweight",
+                    "optimal": "0.87",
+                    "ostk": "14 Crit",
+                    "body": "1.13",
+                    "bstk": "18 Body"
+                },
+                "low": {
+                    "name": "Adaptive",
+                    "optimal": "0.93",
+                    "ostk": "14 Crit 1 Body",
+                    "body": "1.07",
+                    "bstk": "17 Body"
+                }
+            }
+        }
+    },
+    "five":{
+        "weapons": {
+            "autos": {
+                "high": {
+                    "name": "High-Impact",
+                    "optimal": "1.17",
+                    "ostk": "8 Crit",
+                    "body": "1.50",
+                    "bstk": "10 Body"
+                },
+                "medium": {
+                    "name": "Precision",
+                    "optimal": "1.07",
+                    "ostk": "8 Crit 1 Body",
+                    "body": "1.60",
+                    "bstk": "13 Body"
+                },
+                "low": {
+                    "name": "Adaptive",
+                    "optimal": "1.10",
+                    "ostk": "10 Crit 2 Body",
+                    "body": "1.50",
+                    "bstk": "16 Body"
+                },
+                "lowest": {
+                    "name": "Rapid-Fire",
+                    "optimal": "1.10",
+                    "ostk": "14 Crit",
+                    "body": "1.33",
+                    "bstk": "17 Body"
+                }
+            },
+            "scouts": {
+                "high": {
+                    "name": "High-Impact",
+                    "optimal": "1.20",
+                    "ostk": "4 Crit",
+                    "body": "2.00",
+                    "bstk": "6 Body"
+                },
+                "medium": {
+                    "name": "Precision",
+                    "optimal": "1.33",
+                    "ostk": "3 Crit 2 Body",
+                    "body": "1.67",
+                    "bstk": "6 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "1.20",
+                    "ostk": "4 Crit 1 Body",
+                    "body": "1.80",
+                    "bstk": "7 Body"
+                },
+                "lowest": {
+                    "name": "Veist Rapid-Fire",
+                    "optimal": "1.17",
+                    "ostk": "5 Crit 1 Body",
+                    "body": "1.87",
+                    "bstk": "9 Body"
+                }
+            },
+            "pulses": {
+                "high": {
+                    "name": "High-Impact",
+                    "optimal": "1.20",
+                    "ostk": "7 Crit 1 Body",
+                    "body": "2.27",
+                    "bstk": "13 Body"
+                },
+                "medium": {
+                    "name": "Adaptive",
+                    "optimal": "1.13",
+                    "ostk": "8 Crit 1 Body",
+                    "body": "2.07",
+                    "bstk": "14 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "1.20",
+                    "ostk": "10 Crit",
+                    "body": "1.67",
+                    "bstk": "14 Body"
+                },
+                "lowest": {
+                    "name": "Rapid-Fire",
+                    "optimal": "1.07",
+                    "ostk": "11 Crit",
+                    "body": "1.67",
+                    "bstk": "16 Body"
+                }
+            },
+            "handcannons": {
+                "high": {
+                    "name": "Aggressive",
+                    "optimal": "1.07",
+                    "ostk": "3 Crit",
+                    "body": "2.13",
+                    "bstk": "5 Body"
+                },
+                "medium": {
+                    "name": "Adaptive",
+                    "optimal": "1.30",
+                    "ostk": "1 Crit 3 Body",
+                    "body": "1.73",
+                    "bstk": "5 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "1.20",
+                    "ostk": "2 Crit 2 Body",
+                    "body": "1.60",
+                    "bstk": "5 Body"
+                }
+            },
+            "sidearms": {
+                "high": {
+                    "name": "Precision",
+                    "optimal": "0.93",
+                    "ostk": "5 Crit",
+                    "body": "1.40",
+                    "bstk": "7 Body"
+                },
+                "medium": {
+                    "name": "Adaptive",
+                    "optimal": "1.00",
+                    "ostk": "3 Crit 3 Body",
+                    "body": "1.20",
+                    "bstk": "7 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "0.83",
+                    "ostk": "6 Crit",
+                    "body": "1.50",
+                    "bstk": "9 Body"
+                },
+                "burst": {
+                    "name": "Omolon Burst",
+                    "optimal": "0.73",
+                    "ostk": "6 Crit 2 Body",
+                    "body": "1.00",
+                    "bstk": "10 Body"
+                },
+                "rapid": {
+                    "name": "SUROS Rapid-Fire",
+                    "optimal": "0.93",
+                    "ostk": "6 Crit 2 Body",
+                    "body": "1.20",
+                    "bstk": "10 Body"
+                }
+            },
+            "smgs": {
+                "high": {
+                    "name": "Precision",
+                    "optimal": "0.90",
+                    "ostk": "9 Crit 1 Body",
+                    "body": "1.20",
+                    "bstk": "13 Body"
+                },
+                "medium": {
+                    "name": "Lightweight",
+                    "optimal": "0.87",
+                    "ostk": "14 Crit",
+                    "body": "1.13",
+                    "bstk": "18 Body"
+                },
+                "low": {
+                    "name": "Adaptive",
+                    "optimal": "0.93",
+                    "ostk": "15 Crit",
+                    "body": "1.07",
+                    "bstk": "17 Body"
+                }
+            }
+        }
+    },
+    "six":{
+        "weapons": {
+            "autos": {
+                "high": {
+                    "name": "High-Impact",
+                    "optimal": "1.17",
+                    "ostk": "8 Crit",
+                    "body": "1.50",
+                    "bstk": "10 Body"
+                },
+                "medium": {
+                    "name": "Precision",
+                    "optimal": "1.07",
+                    "ostk": "8 Crit 1 Body",
+                    "body": "1.60",
+                    "bstk": "13 Body"
+                },
+                "low": {
+                    "name": "Adaptive",
+                    "optimal": "1.10",
+                    "ostk": "10 Crit 2 Body",
+                    "body": "1.50",
+                    "bstk": "16 Body"
+                },
+                "lowest": {
+                    "name": "Rapid-Fire",
+                    "optimal": "1.17",
+                    "ostk": "9 Crit 6 Body",
+                    "body": "1.33",
+                    "bstk": "17 Body"
+                }
+            },
+            "scouts": {
+                "high": {
+                    "name": "High-Impact",
+                    "optimal": "1.20",
+                    "ostk": "4 Crit",
+                    "body": "2.00",
+                    "bstk": "6 Body"
+                },
+                "medium": {
+                    "name": "Precision",
+                    "optimal": "1.33",
+                    "ostk": "3 Crit 2 Body",
+                    "body": "1.67",
+                    "bstk": "6 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "1.20",
+                    "ostk": "4 Crit 1 Body",
+                    "body": "1.80",
+                    "bstk": "7 Body"
+                },
+                "lowest": {
+                    "name": "Veist Rapid-Fire",
+                    "optimal": "1.17",
+                    "ostk": "5 Crit 1 Body",
+                    "body": "1.87",
+                    "bstk": "9 Body"
+                }
+            },
+            "pulses": {
+                "high": {
+                    "name": "High-Impact",
+                    "optimal": "1.20",
+                    "ostk": "7 Crit 1 Body",
+                    "body": "2.27",
+                    "bstk": "13 Body"
+                },
+                "medium": {
+                    "name": "Adaptive",
+                    "optimal": "1.13",
+                    "ostk": "8 Crit 1 Body",
+                    "body": "2.07",
+                    "bstk": "14 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "1.20",
+                    "ostk": "10 Crit",
+                    "body": "1.73",
+                    "bstk": "15 Body"
+                },
+                "lowest": {
+                    "name": "Rapid-Fire",
+                    "optimal": "1.07",
+                    "ostk": "11 Crit",
+                    "body": "1.67",
+                    "bstk": "16 Body"
+                }
+            },
+            "handcannons": {
+                "high": {
+                    "name": "Aggressive",
+                    "optimal": "1.07",
+                    "ostk": "3 Crit",
+                    "body": "2.13",
+                    "bstk": "5 Body"
+                },
+                "medium": {
+                    "name": "Adaptive",
+                    "optimal": "1.30",
+                    "ostk": "2 Crit 2 Body",
+                    "body": "1.73",
+                    "bstk": "5 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "1.20",
+                    "ostk": "2 Crit 2 Body",
+                    "body": "1.60",
+                    "bstk": "5 Body"
+                }
+            },
+            "sidearms": {
+                "high": {
+                    "name": "Precision",
+                    "optimal": "0.93",
+                    "ostk": "5 Crit",
+                    "body": "1.40",
+                    "bstk": "7 Body"
+                },
+                "medium": {
+                    "name": "Adaptive",
+                    "optimal": "1.00",
+                    "ostk": "3 Crit 3 Body",
+                    "body": "1.20",
+                    "bstk": "7 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "0.83",
+                    "ostk": "6 Crit",
+                    "body": "1.50",
+                    "bstk": "9 Body"
+                },
+                "burst": {
+                    "name": "Omolon Burst",
+                    "optimal": "0.73",
+                    "ostk": "7 Crit 1 Body",
+                    "body": "1.00",
+                    "bstk": "10 Body"
+                },
+                "rapid": {
+                    "name": "SUROS Rapid-Fire",
+                    "optimal": "0.93",
+                    "ostk": "6 Crit 2 Body",
+                    "body": "1.20",
+                    "bstk": "10 Body"
+                }
+            },
+            "smgs": {
+                "high": {
+                    "name": "Precision",
+                    "optimal": "0.90",
+                    "ostk": "10 Crit",
+                    "body": "1.20",
+                    "bstk": "13 Body"
+                },
+                "medium": {
+                    "name": "Lightweight",
+                    "optimal": "0.93",
+                    "ostk": "11 Crit 4 Body",
+                    "body": "1.13",
+                    "bstk": "18 Body"
+                },
+                "low": {
+                    "name": "Adaptive",
+                    "optimal": "1.00",
+                    "ostk": "5 Crit 11 Body",
+                    "body": "1.00",
+                    "bstk": "16 Body"
+                }
+            }
+        }
+    },
+    "seven":{
+        "weapons": {
+            "autos": {
+                "high": {
+                    "name": "High-Impact",
+                    "optimal": "1.17",
+                    "ostk": "8 Crit",
+                    "body": "1.50",
+                    "bstk": "10 Body"
+                },
+                "medium": {
+                    "name": "Precision",
+                    "optimal": "1.07",
+                    "ostk": "8 Crit 1 Body",
+                    "body": "1.60",
+                    "bstk": "13 Body"
+                },
+                "low": {
+                    "name": "Adaptive",
+                    "optimal": "1.10",
+                    "ostk": "10 Crit 2 Body",
+                    "body": "1.50",
+                    "bstk": "16 Body"
+                },
+                "lowest": {
+                    "name": "Rapid-Fire",
+                    "optimal": "1.17",
+                    "ostk": "9 Crit 6 Body",
+                    "body": "1.33",
+                    "bstk": "17 Body"
+                }
+            },
+            "scouts": {
+                "high": {
+                    "name": "High-Impact",
+                    "optimal": "1.20",
+                    "ostk": "4 Crit",
+                    "body": "2.00",
+                    "bstk": "6 Body"
+                },
+                "medium": {
+                    "name": "Precision",
+                    "optimal": "1.33",
+                    "ostk": "3 Crit 2 Body",
+                    "body": "1.67",
+                    "bstk": "6 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "1.20",
+                    "ostk": "4 Crit 1 Body",
+                    "body": "1.80",
+                    "bstk": "7 Body"
+                },
+                "lowest": {
+                    "name": "Veist Rapid-Fire",
+                    "optimal": "1.17",
+                    "ostk": "5 Crit 1 Body",
+                    "body": "1.87",
+                    "bstk": "9 Body"
+                }
+            },
+            "pulses": {
+                "high": {
+                    "name": "High-Impact",
+                    "optimal": "1.20",
+                    "ostk": "7 Crit 1 Body",
+                    "body": "2.27",
+                    "bstk": "13 Body"
+                },
+                "medium": {
+                    "name": "Adaptive",
+                    "optimal": "1.13",
+                    "ostk": "8 Crit 1 Body",
+                    "body": "2.07",
+                    "bstk": "14 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "1.20",
+                    "ostk": "10 Crit",
+                    "body": "1.73",
+                    "bstk": "15 Body"
+                },
+                "lowest": {
+                    "name": "Rapid-Fire",
+                    "optimal": "1.07",
+                    "ostk": "11 Crit",
+                    "body": "1.67",
+                    "bstk": "16 Body"
+                }
+            },
+            "handcannons": {
+                "high": {
+                    "name": "Aggressive",
+                    "optimal": "1.07",
+                    "ostk": "3 Crit",
+                    "body": "2.13",
+                    "bstk": "5 Body"
+                },
+                "medium": {
+                    "name": "Adaptive",
+                    "optimal": "1.30",
+                    "ostk": "2 Crit 2 Body",
+                    "body": "1.73",
+                    "bstk": "5 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "1.20",
+                    "ostk": "2 Crit 2 Body",
+                    "body": "1.60",
+                    "bstk": "5 Body"
+                }
+            },
+            "sidearms": {
+                "high": {
+                    "name": "Precision",
+                    "optimal": "0.93",
+                    "ostk": "5 Crit",
+                    "body": "1.40",
+                    "bstk": "7 Body"
+                },
+                "medium": {
+                    "name": "Adaptive",
+                    "optimal": "1.00",
+                    "ostk": "3 Crit 3 Body",
+                    "body": "1.20",
+                    "bstk": "7 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "0.83",
+                    "ostk": "6 Crit",
+                    "body": "1.50",
+                    "bstk": "9 Body"
+                },
+                "burst": {
+                    "name": "Omolon Burst",
+                    "optimal": "0.73",
+                    "ostk": "7 Crit 1 Body",
+                    "body": "1.00",
+                    "bstk": "10 Body"
+                },
+                "rapid": {
+                    "name": "SUROS Rapid-Fire",
+                    "optimal": "0.93",
+                    "ostk": "6 Crit 2 Body",
+                    "body": "1.20",
+                    "bstk": "10 Body"
+                }
+            },
+            "smgs": {
+                "high": {
+                    "name": "Precision",
+                    "optimal": "0.90",
+                    "ostk": "10 Crit",
+                    "body": "1.20",
+                    "bstk": "13 Body"
+                },
+                "medium": {
+                    "name": "Lightweight",
+                    "optimal": "0.93",
+                    "ostk": "11 Crit 4 Body",
+                    "body": "1.13",
+                    "bstk": "18 Body"
+                },
+                "low": {
+                    "name": "Adaptive",
+                    "optimal": "1.00",
+                    "ostk": "6 Crit 10 Body",
+                    "body": "1.07",
+                    "bstk": "17 Body"
+                }
+            }
+        }
+    },
+    "eight":{
+        "weapons": {
+            "autos": {
+                "high": {
+                    "name": "High-Impact",
+                    "optimal": "1.17",
+                    "ostk": "8 Crit",
+                    "body": "1.50",
+                    "bstk": "10 Body"
+                },
+                "medium": {
+                    "name": "Precision",
+                    "optimal": "1.07",
+                    "ostk": "8 Crit 1 Body",
+                    "body": "1.60",
+                    "bstk": "13 Body"
+                },
+                "low": {
+                    "name": "Adaptive",
+                    "optimal": "1.10",
+                    "ostk": "10 Crit 2 Body",
+                    "body": "1.50",
+                    "bstk": "16 Body"
+                },
+                "lowest": {
+                    "name": "Rapid-Fire",
+                    "optimal": "1.17",
+                    "ostk": "10 Crit 5 Body",
+                    "body": "1.33",
+                    "bstk": "17 Body"
+                }
+            },
+            "scouts": {
+                "high": {
+                    "name": "High-Impact",
+                    "optimal": "1.20",
+                    "ostk": "4 Crit",
+                    "body": "2.00",
+                    "bstk": "6 Body"
+                },
+                "medium": {
+                    "name": "Precision",
+                    "optimal": "1.33",
+                    "ostk": "3 Crit 2 Body",
+                    "body": "1.67",
+                    "bstk": "6 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "1.20",
+                    "ostk": "4 Crit 1 Body",
+                    "body": "1.80",
+                    "bstk": "7 Body"
+                },
+                "lowest": {
+                    "name": "Veist Rapid-Fire",
+                    "optimal": "1.17",
+                    "ostk": "6 Crit",
+                    "body": "1.87",
+                    "bstk": "9 Body"
+                }
+            },
+            "pulses": {
+                "high": {
+                    "name": "High-Impact",
+                    "optimal": "1.20",
+                    "ostk": "8 Crit",
+                    "body": "2.27",
+                    "bstk": "13 Body"
+                },
+                "medium": {
+                    "name": "Adaptive",
+                    "optimal": "1.13",
+                    "ostk": "8 Crit 1 Body",
+                    "body": "2.07",
+                    "bstk": "14 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "1.20",
+                    "ostk": "10 Crit",
+                    "body": "1.73",
+                    "bstk": "15 Body"
+                },
+                "lowest": {
+                    "name": "Rapid-Fire",
+                    "optimal": "1.13",
+                    "ostk": "9 Crit 3 Body",
+                    "body": "1.67",
+                    "bstk": "16 Body"
+                }
+            },
+            "handcannons": {
+                "high": {
+                    "name": "Aggressive",
+                    "optimal": "1.07",
+                    "ostk": "3 Crit",
+                    "body": "2.13",
+                    "bstk": "5 Body"
+                },
+                "medium": {
+                    "name": "Adaptive",
+                    "optimal": "1.30",
+                    "ostk": "2 Crit 2 Body",
+                    "body": "1.73",
+                    "bstk": "5 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "1.20",
+                    "ostk": "2 Crit 2 Body",
+                    "body": "1.60",
+                    "bstk": "5 Body"
+                }
+            },
+            "sidearms": {
+                "high": {
+                    "name": "Precision",
+                    "optimal": "0.93",
+                    "ostk": "5 Crit",
+                    "body": "1.40",
+                    "bstk": "7 Body"
+                },
+                "medium": {
+                    "name": "Adaptive",
+                    "optimal": "1.00",
+                    "ostk": "3 Crit 3 Body",
+                    "body": "1.20",
+                    "bstk": "7 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "0.83",
+                    "ostk": "6 Crit",
+                    "body": "1.50",
+                    "bstk": "9 Body"
+                },
+                "burst": {
+                    "name": "Omolon Burst",
+                    "optimal": "0.73",
+                    "ostk": "7 Crit 1 Body",
+                    "body": "1.00",
+                    "bstk": "10 Body"
+                },
+                "rapid": {
+                    "name": "SUROS Rapid-Fire",
+                    "optimal": "0.93",
+                    "ostk": "6 Crit 2 Body",
+                    "body": "1.20",
+                    "bstk": "10 Body"
+                }
+            },
+            "smgs": {
+                "high": {
+                    "name": "Precision",
+                    "optimal": "0.90",
+                    "ostk": "10 Crit",
+                    "body": "1.20",
+                    "bstk": "13 Body"
+                },
+                "medium": {
+                    "name": "Lightweight",
+                    "optimal": "0.93",
+                    "ostk": "11 Crit 4 Body",
+                    "body": "1.20",
+                    "bstk": "19 Body"
+                },
+                "low": {
+                    "name": "Adaptive",
+                    "optimal": "0.93",
+                    "ostk": "10 Crit 5 Body",
+                    "body": "1.00",
+                    "bstk": "16 Body"
+                }
+            }
+        }
+    },
+    "nine":{
+        "weapons": {
+            "autos": {
+                "high": {
+                    "name": "High-Impact",
+                    "optimal": "1.17",
+                    "ostk": "8 Crit",
+                    "body": "1.50",
+                    "bstk": "10 Body"
+                },
+                "medium": {
+                    "name": "Precision",
+                    "optimal": "1.07",
+                    "ostk": "8 Crit 1 Body",
+                    "body": "1.60",
+                    "bstk": "13 Body"
+                },
+                "low": {
+                    "name": "Adaptive",
+                    "optimal": "1.10",
+                    "ostk": "11 Crit 1 Body",
+                    "body": "1.50",
+                    "bstk": "16 Body"
+                },
+                "lowest": {
+                    "name": "Rapid-Fire",
+                    "optimal": "1.17",
+                    "ostk": "10 Crit 5 Body",
+                    "body": "1.33",
+                    "bstk": "17 Body"
+                }
+            },
+            "scouts": {
+                "high": {
+                    "name": "High-Impact",
+                    "optimal": "1.20",
+                    "ostk": "4 Crit",
+                    "body": "2.00",
+                    "bstk": "6 Body"
+                },
+                "medium": {
+                    "name": "Precision",
+                    "optimal": "1.33",
+                    "ostk": "3 Crit 2 Body",
+                    "body": "1.67",
+                    "bstk": "6 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "1.20",
+                    "ostk": "4 Crit 1 Body",
+                    "body": "1.80",
+                    "bstk": "7 Body"
+                },
+                "lowest": {
+                    "name": "Veist Rapid-Fire",
+                    "optimal": "1.17",
+                    "ostk": "6 Crit",
+                    "body": "1.87",
+                    "bstk": "9 Body"
+                }
+            },
+            "pulses": {
+                "high": {
+                    "name": "High-Impact",
+                    "optimal": "1.20",
+                    "ostk": "8 Crit",
+                    "body": "2.27",
+                    "bstk": "13 Body"
+                },
+                "medium": {
+                    "name": "Adaptive",
+                    "optimal": "1.13",
+                    "ostk": "9 Crit",
+                    "body": "2.07",
+                    "bstk": "14 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "1.20",
+                    "ostk": "10 Crit",
+                    "body": "1.73",
+                    "bstk": "15 Body"
+                },
+                "lowest": {
+                    "name": "Rapid-Fire",
+                    "optimal": "1.13",
+                    "ostk": "9 Crit 3 Body",
+                    "body": "1.67",
+                    "bstk": "16 Body"
+                }
+            },
+            "handcannons": {
+                "high": {
+                    "name": "Aggressive",
+                    "optimal": "1.07",
+                    "ostk": "3 Crit",
+                    "body": "2.13",
+                    "bstk": "5 Body"
+                },
+                "medium": {
+                    "name": "Adaptive",
+                    "optimal": "1.30",
+                    "ostk": "2 Crit 2 Body",
+                    "body": "1.73",
+                    "bstk": "5 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "1.20",
+                    "ostk": "2 Crit 2 Body",
+                    "body": "1.60",
+                    "bstk": "5 Body"
+                }
+            },
+            "sidearms": {
+                "high": {
+                    "name": "Precision",
+                    "optimal": "0.93",
+                    "ostk": "5 Crit",
+                    "body": "1.40",
+                    "bstk": "7 Body"
+                },
+                "medium": {
+                    "name": "Adaptive",
+                    "optimal": "1.00",
+                    "ostk": "3 Crit 3 Body",
+                    "body": "1.20",
+                    "bstk": "7 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "0.83",
+                    "ostk": "6 Crit",
+                    "body": "1.50",
+                    "bstk": "9 Body"
+                },
+                "burst": {
+                    "name": "Omolon Burst",
+                    "optimal": "0.73",
+                    "ostk": "7 Crit 1 Body",
+                    "body": "1.00",
+                    "bstk": "10 Body"
+                },
+                "rapid": {
+                    "name": "SUROS Rapid-Fire",
+                    "optimal": "0.93",
+                    "ostk": "6 Crit 2 Body",
+                    "body": "1.20",
+                    "bstk": "10 Body"
+                }
+            },
+            "smgs": {
+                "high": {
+                    "name": "Precision",
+                    "optimal": "0.90",
+                    "ostk": "10 Crit",
+                    "body": "1.20",
+                    "bstk": "13 Body"
+                },
+                "medium": {
+                    "name": "Lightweight",
+                    "optimal": "0.93",
+                    "ostk": "12 Crit 3 Body",
+                    "body": "1.20",
+                    "bstk": "19 Body"
+                },
+                "low": {
+                    "name": "Adaptive",
+                    "optimal": "1.00",
+                    "ostk": "8 Crit 8 Body",
+                    "body": "1.07",
+                    "bstk": "17 Body"
+                }
+            }
+        }
+    },
+    "ten":{
+        "weapons": {
+            "autos": {
+                "high": {
+                    "name": "High-Impact",
+                    "optimal": "1.17",
+                    "ostk": "6 Crit 2 Body",
+                    "body": "1.50",
+                    "bstk": "10 Body"
+                },
+                "medium": {
+                    "name": "Precision",
+                    "optimal": "1.07",
+                    "ostk": "6 Crit 3 Body",
+                    "body": "1.47",
+                    "bstk": "12 Body"
+                },
+                "low": {
+                    "name": "Adaptive",
+                    "optimal": "1.00",
+                    "ostk": "11 Crit",
+                    "body": "1.40",
+                    "bstk": "15 Body"
+                },
+                "lowest": {
+                    "name": "Rapid-Fire",
+                    "optimal": "1.10",
+                    "ostk": "9 Crit 5 Body",
+                    "body": "1.27",
+                    "bstk": "16 Body"
+                }
+            },
+            "scouts": {
+                "high": {
+                    "name": "High-Impact",
+                    "optimal": "1.20",
+                    "ostk": "3 Crit 1 Body",
+                    "body": "2.00",
+                    "bstk": "6 Body"
+                },
+                "medium": {
+                    "name": "Precision",
+                    "optimal": "1.00",
+                    "ostk": "4 Crit",
+                    "body": "1.67",
+                    "bstk": "6 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "1.20",
+                    "ostk": "3 Crit 2 Body",
+                    "body": "1.80",
+                    "bstk": "7 Body"
+                },
+                "lowest": {
+                    "name": "Veist Rapid-Fire",
+                    "optimal": "1.17",
+                    "ostk": "4 Crit 2 Body",
+                    "body": "1.87",
+                    "bstk": "9 Body"
+                }
+            },
+            "pulses": {
+                "high": {
+                    "name": "High-Impact",
+                    "optimal": "1.20",
+                    "ostk": "6 Crit 2 Body",
+                    "body": "1.83",
+                    "bstk": "12 Body"
+                },
+                "medium": {
+                    "name": "Adaptive",
+                    "optimal": "1.13",
+                    "ostk": "7 Crit 2 Body",
+                    "body": "2.00",
+                    "bstk": "13 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "1.20",
+                    "ostk": "8 Crit 2 Body",
+                    "body": "1.67",
+                    "bstk": "14 Body"
+                },
+                "lowest": {
+                    "name": "Rapid-Fire",
+                    "optimal": "1.07",
+                    "ostk": "9 Crit 2 Body",
+                    "body": "1.47",
+                    "bstk": "15 Body"
+                }
+            },
+            "handcannons": {
+                "high": {
+                    "name": "Aggressive",
+                    "optimal": "1.07",
+                    "ostk": "2 Crit 1 Body",
+                    "body": "1.60",
+                    "bstk": "4 Body"
+                },
+                "medium": {
+                    "name": "Adaptive",
+                    "optimal": "1.30",
+                    "ostk": "1 Crit 3 Body",
+                    "body": "1.73",
+                    "bstk": "5 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "1.20",
+                    "ostk": "2 Crit 2 Body",
+                    "body": "1.60",
+                    "bstk": "5 Body"
+                }
+            },
+            "sidearms": {
+                "high": {
+                    "name": "Precision",
+                    "optimal": "0.93",
+                    "ostk": "4 Crit 1 Body",
+                    "body": "1.40",
+                    "bstk": "7 Body"
+                },
+                "medium": {
+                    "name": "Adaptive",
+                    "optimal": "0.80",
+                    "ostk": "5 Crit",
+                    "body": "1.20",
+                    "bstk": "7 Body"
+                },
+                "low": {
+                    "name": "Lightweight",
+                    "optimal": "0.83",
+                    "ostk": "5 Crit 1 Body",
+                    "body": "1.50",
+                    "bstk": "9 Body"
+                },
+                "burst": {
+                    "name": "Omolon Burst",
+                    "optimal": "0.73",
+                    "ostk": "5 Crit 1 Body",
+                    "body": "1.00",
+                    "bstk": "10 Body"
+                },
+                "rapid": {
+                    "name": "SUROS Rapid-Fire",
+                    "optimal": "0.60",
+                    "ostk": "7 Crit",
+                    "body": "1.20",
+                    "bstk": "10 Body"
+                }
+            },
+            "smgs": {
+                "high": {
+                    "name": "Precision",
+                    "optimal": "0.90",
+                    "ostk": "7 Crit 3 Body",
+                    "body": "1.10",
+                    "bstk": "12 Body"
+                },
+                "medium": {
+                    "name": "Lightweight",
+                    "optimal": "0.87",
+                    "ostk": "11 Crit 3 Body",
+                    "body": "1.07",
+                    "bstk": "17 Body"
+                },
+                "low": {
+                    "name": "Adaptive",
+                    "optimal": "0.93",
+                    "ostk": "10 Crit 5 Body",
+                    "body": "1.00",
+                    "bstk": "16 Body"
+                }
+            }
+        }
+    }
+    
+}

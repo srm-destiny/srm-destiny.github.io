@@ -1,0 +1,679 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+
+<dom-module id="table-data" class="layout">
+  <template>
+      <style>
+          table{
+              border-spacing: 0px;
+              color: #f3f3f3;
+          }
+          
+          .autos{
+              background-color: #F44336;
+          }
+          .auto-sub{
+              background-color: rgba(0,0,0,0.2);
+          }
+          .scouts{
+              background-color: #2196F3;
+          }
+          .scout-sub{
+              background-color: rgba(0,0,0,0.2);
+          }
+          .pulses{
+              background-color: #4CAF50;
+          }
+          .pulse-sub{
+              background-color: rgba(0,0,0,0.2);
+          }
+          .handcannons{
+              background-color: #FF5722;
+          }
+          .handcannon-sub{
+              background-color: rgba(0,0,0,0.2);
+          }
+          .sidearms{
+              background-color: #607D8B;
+          }
+          .sidearm-sub{
+              background-color: rgba(0,0,0,0.2);
+          }
+          .smgs{
+              background-color: #673AB7;
+          }
+          .smg-sub{
+              background-color: rgba(0,0,0,0.2);
+          }
+      </style>
+      <iron-ajax auto
+                 url='data.json'
+                 handle-as="json"
+                 last-response='{{data}}'>
+      </iron-ajax>
+      <table style="width:100%" id="table">
+          <tr style="color:black">
+              <th>Weapon</th>
+              <th>Archetype</th> 
+              <th>Optimal</th>
+              <th>Optimal Shots to Kill</th>
+              <th>Body Shot Time to Kill</th>
+              <th>Body Shots to Kill</th>
+          </tr>
+          <tr class="autos">
+              <td>Auto Rifles</td>
+              <td class="auto-sub">{{autoHigh.name}}</td>
+              <td class="auto-sub">{{autoHigh.optimal}}</td>
+              <td class="auto-sub">{{autoHigh.ostk}}</td>
+              <td class="auto-sub">{{autoHigh.body}}</td>
+              <td class="auto-sub">{{autoHigh.bstk}}</td>
+          </tr>
+          <tr class="autos">
+              <td></td>
+              <td>{{autoMedium.name}}</td>
+              <td>{{autoMedium.optimal}}</td>
+              <td>{{autoMedium.ostk}}</td>
+              <td>{{autoMedium.body}}</td>
+              <td>{{autoMedium.bstk}}</td>
+          </tr>
+          <tr class="autos">
+              <td></td>
+              <td class="auto-sub">{{autoLow.name}}</td>
+              <td class="auto-sub">{{autoLow.optimal}}</td>
+              <td class="auto-sub">{{autoLow.ostk}}</td>
+              <td class="auto-sub">{{autoLow.body}}</td>
+              <td class="auto-sub">{{autoLow.bstk}}</td>
+          </tr>
+          <tr class="autos">
+              <td></td>
+              <td>{{autoLowest.name}}</td>
+              <td>{{autoLowest.optimal}}</td>
+              <td>{{autoLowest.ostk}}</td>
+              <td>{{autoLowest.body}}</td>
+              <td>{{autoLowest.bstk}}</td>
+          </tr>
+          
+          <tr class="scouts">
+              <td>Scout Rifles</td>
+              <td class="scout-sub">{{scoutHigh.name}}</td>
+              <td class="scout-sub">{{scoutHigh.optimal}}</td>
+              <td class="scout-sub">{{scoutHigh.ostk}}</td>
+              <td class="scout-sub">{{scoutHigh.body}}</td>
+              <td class="scout-sub">{{scoutHigh.bstk}}</td>
+          </tr>
+          <tr class="scouts">
+              <td></td>
+              <td>{{scoutMedium.name}}</td>
+              <td>{{scoutMedium.optimal}}</td>
+              <td>{{scoutMedium.ostk}}</td>
+              <td>{{scoutMedium.body}}</td>
+              <td>{{scoutMedium.bstk}}</td>
+          </tr>
+          <tr class="scouts">
+              <td></td>
+              <td class="scout-sub">{{scoutLow.name}}</td>
+              <td class="scout-sub">{{scoutLow.optimal}}</td>
+              <td class="scout-sub">{{scoutLow.ostk}}</td>
+              <td class="scout-sub">{{scoutLow.body}}</td>
+              <td class="scout-sub">{{scoutLow.bstk}}</td>
+          </tr>
+          <tr class="scouts">
+              <td></td>
+              <td>{{scoutLowest.name}}</td>
+              <td>{{scoutLowest.optimal}}</td>
+              <td>{{scoutLowest.ostk}}</td>
+              <td>{{scoutLowest.body}}</td>
+              <td>{{scoutLowest.bstk}}</td>
+          </tr>
+          
+          <tr class="pulses">
+              <td>Pulse Rifles</td>
+              <td class="pulse-sub">{{pulseHigh.name}}</td>
+              <td class="pulse-sub">{{pulseHigh.optimal}}</td>
+              <td class="pulse-sub">{{pulseHigh.ostk}}</td>
+              <td class="pulse-sub">{{pulseHigh.body}}</td>
+              <td class="pulse-sub">{{pulseHigh.bstk}}</td>
+          </tr>
+          <tr class="pulses">
+              <td></td>
+              <td>{{pulseMedium.name}}</td>
+              <td>{{pulseMedium.optimal}}</td>
+              <td>{{pulseMedium.ostk}}</td>
+              <td>{{pulseMedium.body}}</td>
+              <td>{{pulseMedium.bstk}}</td>
+          </tr>
+          <tr class="pulses">
+              <td></td>
+              <td class="pulse-sub">{{pulseLow.name}}</td>
+              <td class="pulse-sub">{{pulseLow.optimal}}</td>
+              <td class="pulse-sub">{{pulseLow.ostk}}</td>
+              <td class="pulse-sub">{{pulseLow.body}}</td>
+              <td class="pulse-sub">{{pulseLow.bstk}}</td>
+          </tr>
+          <tr class="pulses">
+              <td></td>
+              <td>{{pulseLowest.name}}</td>
+              <td>{{pulseLowest.optimal}}</td>
+              <td>{{pulseLowest.ostk}}</td>
+              <td>{{pulseLowest.body}}</td>
+              <td>{{pulseLowest.bstk}}</td>
+          </tr>
+          
+          <tr class="handcannons">
+              <td>Handcannons</td>
+              <td class="handcannon-sub">{{handHigh.name}}</td>
+              <td class="handcannon-sub">{{handHigh.optimal}}</td>
+              <td class="handcannon-sub">{{handHigh.ostk}}</td>
+              <td class="handcannon-sub">{{handHigh.body}}</td>
+              <td class="handcannon-sub">{{handHigh.bstk}}</td>
+          </tr>
+          <tr class="handcannons">
+              <td></td>
+              <td>{{handMedium.name}}</td>
+              <td>{{handMedium.optimal}}</td>
+              <td>{{handMedium.ostk}}</td>
+              <td>{{handMedium.body}}</td>
+              <td>{{handMedium.bstk}}</td>
+          </tr>
+          <tr class="handcannons">
+              <td></td>
+              <td class="handcannon-sub">{{handLow.name}}</td>
+              <td class="handcannon-sub">{{handLow.optimal}}</td>
+              <td class="handcannon-sub">{{handLow.ostk}}</td>
+              <td class="handcannon-sub">{{handLow.body}}</td>
+              <td class="handcannon-sub">{{handLow.bstk}}</td>
+          </tr>
+          
+          <tr class="sidearms">
+              <td>Sidearms</td>
+              <td>{{sidearmHigh.name}}</td>
+              <td>{{sidearmHigh.optimal}}</td>
+              <td>{{sidearmHigh.ostk}}</td>
+              <td>{{sidearmHigh.body}}</td>
+              <td>{{sidearmHigh.bstk}}</td>
+          </tr>
+          <tr class="sidearms">
+              <td></td>
+              <td class="sidearm-sub">{{sidearmMedium.name}}</td>
+              <td class="sidearm-sub">{{sidearmMedium.optimal}}</td>
+              <td class="sidearm-sub">{{sidearmMedium.ostk}}</td>
+              <td class="sidearm-sub">{{sidearmMedium.body}}</td>
+              <td class="sidearm-sub">{{sidearmMedium.bstk}}</td>
+          </tr>
+          <tr class="sidearms">
+              <td></td>
+              <td>{{sidearmLow.name}}</td>
+              <td>{{sidearmLow.optimal}}</td>
+              <td>{{sidearmLow.ostk}}</td>
+              <td>{{sidearmLow.body}}</td>
+              <td>{{sidearmLow.bstk}}</td>
+          </tr>
+          <tr class="sidearms">
+              <td></td>
+              <td class="sidearm-sub">{{sidearmBurst.name}}</td>
+              <td class="sidearm-sub">{{sidearmBurst.optimal}}</td>
+              <td class="sidearm-sub">{{sidearmBurst.ostk}}</td>
+              <td class="sidearm-sub">{{sidearmBurst.body}}</td>
+              <td class="sidearm-sub">{{sidearmBurst.bstk}}</td>
+          </tr>
+          <tr class="sidearms">
+              <td></td>
+              <td>{{sidearmRapid.name}}</td>
+              <td>{{sidearmRapid.optimal}}</td>
+              <td>{{sidearmRapid.ostk}}</td>
+              <td>{{sidearmRapid.body}}</td>
+              <td>{{sidearmRapid.bstk}}</td>
+          </tr>
+          
+          <tr class="smgs">
+              <td>SMG</td>
+              <td class="smg-sub">{{smgHigh.name}}</td>
+              <td class="smg-sub">{{smgHigh.optimal}}</td>
+              <td class="smg-sub">{{smgHigh.ostk}}</td>
+              <td class="smg-sub">{{smgHigh.body}}</td>
+              <td class="smg-sub">{{smgHigh.bstk}}</td>
+          </tr>
+          <tr class="smgs">
+              <td></td>
+              <td>{{smgMedium.name}}</td>
+              <td>{{smgMedium.optimal}}</td>
+              <td>{{smgMedium.ostk}}</td>
+              <td>{{smgMedium.body}}</td>
+              <td>{{smgMedium.bstk}}</td>
+          </tr>
+          <tr class="smgs">
+              <td></td>
+              <td class="smg-sub">{{smgLow.name}}</td>
+              <td class="smg-sub">{{smgLow.optimal}}</td>
+              <td class="smg-sub">{{smgLow.ostk}}</td>
+              <td class="smg-sub">{{smgLow.body}}</td>
+              <td class="smg-sub">{{smgLow.bstk}}</td>
+          </tr>
+      </table>
+  </template>
+
+  <script>
+    Polymer({
+        is: 'table-data',
+        properties: {
+            data: {
+                type: Object
+            },
+            resilence: {
+                type: Number,
+                notify: true,
+                observer: '_runCheck'
+            },
+            //Autos
+            autoHigh:{
+                type:Object
+            },
+            autoMedium:{
+                type:Object
+            },
+            autoLow:{
+                type:Object
+            },
+            autoLowest:{
+                type:Object
+            },
+            //Scouts
+            scoutHigh:{
+                type:Object
+            },
+            scoutMedium:{
+                type:Object
+            },
+            scoutLow:{
+                type:Object
+            },
+            scoutLowest:{
+                type:Object
+            },
+            //Pulses
+            pulseHigh:{
+                type:Object
+            },
+            pulseMedium:{
+                type:Object
+            },
+            pulseLow:{
+                type:Object
+            },
+            pulseLowest:{
+                type:Object
+            },
+            //Handcannons
+            handHigh:{
+                type:Object
+            },
+            handMedium:{
+                type:Object
+            },
+            handLow:{
+                type:Object
+            },
+            //Sidearms
+            sidearmHigh:{
+                type:Object
+            },
+            sidearmMedium:{
+                type:Object
+            },
+            sidearmLow:{
+                type:Object
+            },
+            sidearmBurst:{
+                type:Object
+            },
+            sidearmRapid:{
+                type:Object
+            },
+            //SMGs
+            smgHigh:{
+                type:Object
+            },
+            smgMedium:{
+                type:Object
+            },
+            smgLow:{
+                type:Object
+            }
+            
+        },
+        _runCheck: function(){
+            r = this.resilence;
+            if(r === 0){
+                this.autoHigh = this.data.zero.weapons.autos.high;
+                this.autoMedium = this.data.zero.weapons.autos.medium;
+                this.autoLow = this.data.zero.weapons.autos.low;
+                this.autoLowest = this.data.zero.weapons.autos.lowest;
+                
+                this.scoutHigh = this.data.zero.weapons.scouts.high;
+                this.scoutMedium = this.data.zero.weapons.scouts.medium;
+                this.scoutLow = this.data.zero.weapons.scouts.low;
+                this.scoutLowest = this.data.zero.weapons.scouts.lowest;
+                
+                this.pulseHigh = this.data.zero.weapons.pulses.high;
+                this.pulseMedium = this.data.zero.weapons.pulses.medium;
+                this.pulseLow = this.data.zero.weapons.pulses.low;
+                this.pulseLowest = this.data.zero.weapons.pulses.lowest;
+                
+                this.handHigh = this.data.zero.weapons.handcannons.high;
+                this.handMedium = this.data.zero.weapons.handcannons.medium;
+                this.handLow = this.data.zero.weapons.handcannons.low;
+                
+                this.sidearmHigh = this.data.zero.weapons.sidearms.high;
+                this.sidearmMedium = this.data.zero.weapons.sidearms.medium;
+                this.sidearmLow = this.data.zero.weapons.sidearms.low;
+                this.sidearmBurst = this.data.zero.weapons.sidearms.burst;
+                this.sidearmRapid = this.data.zero.weapons.sidearms.rapid;
+                
+                this.smgHigh = this.data.zero.weapons.smgs.high;
+                this.smgMedium = this.data.zero.weapons.smgs.medium;
+                this.smgLow = this.data.zero.weapons.smgs.low;
+            }
+            if(r === 1){
+                this.autoHigh = this.data.one.weapons.autos.high;
+                this.autoMedium = this.data.one.weapons.autos.medium;
+                this.autoLow = this.data.one.weapons.autos.low;
+                this.autoLowest = this.data.one.weapons.autos.lowest;
+                
+                this.scoutHigh = this.data.one.weapons.scouts.high;
+                this.scoutMedium = this.data.one.weapons.scouts.medium;
+                this.scoutLow = this.data.one.weapons.scouts.low;
+                this.scoutLowest = this.data.one.weapons.scouts.lowest;
+                
+                this.pulseHigh = this.data.one.weapons.pulses.high;
+                this.pulseMedium = this.data.one.weapons.pulses.medium;
+                this.pulseLow = this.data.one.weapons.pulses.low;
+                this.pulseLowest = this.data.one.weapons.pulses.lowest;
+                
+                this.handHigh = this.data.one.weapons.handcannons.high;
+                this.handMedium = this.data.one.weapons.handcannons.medium;
+                this.handLow = this.data.one.weapons.handcannons.low;
+                
+                this.sidearmHigh = this.data.one.weapons.sidearms.high;
+                this.sidearmMedium = this.data.one.weapons.sidearms.medium;
+                this.sidearmLow = this.data.one.weapons.sidearms.low;
+                this.sidearmBurst = this.data.one.weapons.sidearms.burst;
+                this.sidearmRapid = this.data.one.weapons.sidearms.rapid;
+                
+                this.smgHigh = this.data.one.weapons.smgs.high;
+                this.smgMedium = this.data.one.weapons.smgs.medium;
+                this.smgLow = this.data.one.weapons.smgs.low;
+            }
+            if(r === 2){
+                this.autoHigh = this.data.two.weapons.autos.high;
+                this.autoMedium = this.data.two.weapons.autos.medium;
+                this.autoLow = this.data.two.weapons.autos.low;
+                this.autoLowest = this.data.two.weapons.autos.lowest;
+                
+                this.scoutHigh = this.data.two.weapons.scouts.high;
+                this.scoutMedium = this.data.two.weapons.scouts.medium;
+                this.scoutLow = this.data.two.weapons.scouts.low;
+                this.scoutLowest = this.data.two.weapons.scouts.lowest;
+                
+                this.pulseHigh = this.data.two.weapons.pulses.high;
+                this.pulseMedium = this.data.two.weapons.pulses.medium;
+                this.pulseLow = this.data.two.weapons.pulses.low;
+                this.pulseLowest = this.data.two.weapons.pulses.lowest;
+                
+                this.handHigh = this.data.two.weapons.handcannons.high;
+                this.handMedium = this.data.two.weapons.handcannons.medium;
+                this.handLow = this.data.two.weapons.handcannons.low;
+                
+                this.sidearmHigh = this.data.two.weapons.sidearms.high;
+                this.sidearmMedium = this.data.two.weapons.sidearms.medium;
+                this.sidearmLow = this.data.two.weapons.sidearms.low;
+                this.sidearmBurst = this.data.two.weapons.sidearms.burst;
+                this.sidearmRapid = this.data.two.weapons.sidearms.rapid;
+                
+                this.smgHigh = this.data.two.weapons.smgs.high;
+                this.smgMedium = this.data.two.weapons.smgs.medium;
+                this.smgLow = this.data.two.weapons.smgs.low;
+            }
+            if(r === 3){
+                this.autoHigh = this.data.three.weapons.autos.high;
+                this.autoMedium = this.data.three.weapons.autos.medium;
+                this.autoLow = this.data.three.weapons.autos.low;
+                this.autoLowest = this.data.three.weapons.autos.lowest;
+                
+                this.scoutHigh = this.data.three.weapons.scouts.high;
+                this.scoutMedium = this.data.three.weapons.scouts.medium;
+                this.scoutLow = this.data.three.weapons.scouts.low;
+                this.scoutLowest = this.data.three.weapons.scouts.lowest;
+                
+                this.pulseHigh = this.data.three.weapons.pulses.high;
+                this.pulseMedium = this.data.three.weapons.pulses.medium;
+                this.pulseLow = this.data.three.weapons.pulses.low;
+                this.pulseLowest = this.data.three.weapons.pulses.lowest;
+                
+                this.handHigh = this.data.three.weapons.handcannons.high;
+                this.handMedium = this.data.three.weapons.handcannons.medium;
+                this.handLow = this.data.three.weapons.handcannons.low;
+                
+                this.sidearmHigh = this.data.three.weapons.sidearms.high;
+                this.sidearmMedium = this.data.three.weapons.sidearms.medium;
+                this.sidearmLow = this.data.three.weapons.sidearms.low;
+                this.sidearmBurst = this.data.three.weapons.sidearms.burst;
+                this.sidearmRapid = this.data.three.weapons.sidearms.rapid;
+                
+                this.smgHigh = this.data.three.weapons.smgs.high;
+                this.smgMedium = this.data.three.weapons.smgs.medium;
+                this.smgLow = this.data.three.weapons.smgs.low;
+            }
+            if(r === 4){
+                this.autoHigh = this.data.four.weapons.autos.high;
+                this.autoMedium = this.data.four.weapons.autos.medium;
+                this.autoLow = this.data.four.weapons.autos.low;
+                this.autoLowest = this.data.four.weapons.autos.lowest;
+                
+                this.scoutHigh = this.data.four.weapons.scouts.high;
+                this.scoutMedium = this.data.four.weapons.scouts.medium;
+                this.scoutLow = this.data.four.weapons.scouts.low;
+                this.scoutLowest = this.data.four.weapons.scouts.lowest;
+                
+                this.pulseHigh = this.data.four.weapons.pulses.high;
+                this.pulseMedium = this.data.four.weapons.pulses.medium;
+                this.pulseLow = this.data.four.weapons.pulses.low;
+                this.pulseLowest = this.data.four.weapons.pulses.lowest;
+                
+                this.handHigh = this.data.four.weapons.handcannons.high;
+                this.handMedium = this.data.four.weapons.handcannons.medium;
+                this.handLow = this.data.four.weapons.handcannons.low;
+                
+                this.sidearmHigh = this.data.four.weapons.sidearms.high;
+                this.sidearmMedium = this.data.four.weapons.sidearms.medium;
+                this.sidearmLow = this.data.four.weapons.sidearms.low;
+                this.sidearmBurst = this.data.four.weapons.sidearms.burst;
+                this.sidearmRapid = this.data.four.weapons.sidearms.rapid;
+                
+                this.smgHigh = this.data.four.weapons.smgs.high;
+                this.smgMedium = this.data.four.weapons.smgs.medium;
+                this.smgLow = this.data.four.weapons.smgs.low;
+            }
+            if(r === 5){
+                this.autoHigh = this.data.five.weapons.autos.high;
+                this.autoMedium = this.data.five.weapons.autos.medium;
+                this.autoLow = this.data.five.weapons.autos.low;
+                this.autoLowest = this.data.five.weapons.autos.lowest;
+                
+                this.scoutHigh = this.data.five.weapons.scouts.high;
+                this.scoutMedium = this.data.five.weapons.scouts.medium;
+                this.scoutLow = this.data.five.weapons.scouts.low;
+                this.scoutLowest = this.data.five.weapons.scouts.lowest;
+                
+                this.pulseHigh = this.data.five.weapons.pulses.high;
+                this.pulseMedium = this.data.five.weapons.pulses.medium;
+                this.pulseLow = this.data.five.weapons.pulses.low;
+                this.pulseLowest = this.data.five.weapons.pulses.lowest;
+                
+                this.handHigh = this.data.five.weapons.handcannons.high;
+                this.handMedium = this.data.five.weapons.handcannons.medium;
+                this.handLow = this.data.five.weapons.handcannons.low;
+                
+                this.sidearmHigh = this.data.five.weapons.sidearms.high;
+                this.sidearmMedium = this.data.five.weapons.sidearms.medium;
+                this.sidearmLow = this.data.five.weapons.sidearms.low;
+                this.sidearmBurst = this.data.five.weapons.sidearms.burst;
+                this.sidearmRapid = this.data.five.weapons.sidearms.rapid;
+                
+                this.smgHigh = this.data.five.weapons.smgs.high;
+                this.smgMedium = this.data.five.weapons.smgs.medium;
+                this.smgLow = this.data.five.weapons.smgs.low;
+            }
+            if(r === 6){
+                this.autoHigh = this.data.six.weapons.autos.high;
+                this.autoMedium = this.data.six.weapons.autos.medium;
+                this.autoLow = this.data.six.weapons.autos.low;
+                this.autoLowest = this.data.six.weapons.autos.lowest;
+                
+                this.scoutHigh = this.data.six.weapons.scouts.high;
+                this.scoutMedium = this.data.six.weapons.scouts.medium;
+                this.scoutLow = this.data.six.weapons.scouts.low;
+                this.scoutLowest = this.data.six.weapons.scouts.lowest;
+                
+                this.pulseHigh = this.data.six.weapons.pulses.high;
+                this.pulseMedium = this.data.six.weapons.pulses.medium;
+                this.pulseLow = this.data.six.weapons.pulses.low;
+                this.pulseLowest = this.data.six.weapons.pulses.lowest;
+                
+                this.handHigh = this.data.six.weapons.handcannons.high;
+                this.handMedium = this.data.six.weapons.handcannons.medium;
+                this.handLow = this.data.six.weapons.handcannons.low;
+                
+                this.sidearmHigh = this.data.six.weapons.sidearms.high;
+                this.sidearmMedium = this.data.six.weapons.sidearms.medium;
+                this.sidearmLow = this.data.six.weapons.sidearms.low;
+                this.sidearmBurst = this.data.six.weapons.sidearms.burst;
+                this.sidearmRapid = this.data.six.weapons.sidearms.rapid;
+                
+                this.smgHigh = this.data.six.weapons.smgs.high;
+                this.smgMedium = this.data.six.weapons.smgs.medium;
+                this.smgLow = this.data.six.weapons.smgs.low;
+            }
+            if(r === 7){
+                this.autoHigh = this.data.seven.weapons.autos.high;
+                this.autoMedium = this.data.seven.weapons.autos.medium;
+                this.autoLow = this.data.seven.weapons.autos.low;
+                this.autoLowest = this.data.seven.weapons.autos.lowest;
+                
+                this.scoutHigh = this.data.seven.weapons.scouts.high;
+                this.scoutMedium = this.data.seven.weapons.scouts.medium;
+                this.scoutLow = this.data.seven.weapons.scouts.low;
+                this.scoutLowest = this.data.seven.weapons.scouts.lowest;
+                
+                this.pulseHigh = this.data.seven.weapons.pulses.high;
+                this.pulseMedium = this.data.seven.weapons.pulses.medium;
+                this.pulseLow = this.data.seven.weapons.pulses.low;
+                this.pulseLowest = this.data.seven.weapons.pulses.lowest;
+                
+                this.handHigh = this.data.seven.weapons.handcannons.high;
+                this.handMedium = this.data.seven.weapons.handcannons.medium;
+                this.handLow = this.data.seven.weapons.handcannons.low;
+                
+                this.sidearmHigh = this.data.seven.weapons.sidearms.high;
+                this.sidearmMedium = this.data.seven.weapons.sidearms.medium;
+                this.sidearmLow = this.data.seven.weapons.sidearms.low;
+                this.sidearmBurst = this.data.seven.weapons.sidearms.burst;
+                this.sidearmRapid = this.data.seven.weapons.sidearms.rapid;
+                
+                this.smgHigh = this.data.seven.weapons.smgs.high;
+                this.smgMedium = this.data.seven.weapons.smgs.medium;
+                this.smgLow = this.data.seven.weapons.smgs.low;
+            }
+            if(r === 8){
+                this.autoHigh = this.data.eight.weapons.autos.high;
+                this.autoMedium = this.data.eight.weapons.autos.medium;
+                this.autoLow = this.data.eight.weapons.autos.low;
+                this.autoLowest = this.data.eight.weapons.autos.lowest;
+                
+                this.scoutHigh = this.data.eight.weapons.scouts.high;
+                this.scoutMedium = this.data.eight.weapons.scouts.medium;
+                this.scoutLow = this.data.eight.weapons.scouts.low;
+                this.scoutLowest = this.data.eight.weapons.scouts.lowest;
+                
+                this.pulseHigh = this.data.eight.weapons.pulses.high;
+                this.pulseMedium = this.data.eight.weapons.pulses.medium;
+                this.pulseLow = this.data.eight.weapons.pulses.low;
+                this.pulseLowest = this.data.eight.weapons.pulses.lowest;
+                
+                this.handHigh = this.data.eight.weapons.handcannons.high;
+                this.handMedium = this.data.eight.weapons.handcannons.medium;
+                this.handLow = this.data.eight.weapons.handcannons.low;
+                
+                this.sidearmHigh = this.data.eight.weapons.sidearms.high;
+                this.sidearmMedium = this.data.eight.weapons.sidearms.medium;
+                this.sidearmLow = this.data.eight.weapons.sidearms.low;
+                this.sidearmBurst = this.data.eight.weapons.sidearms.burst;
+                this.sidearmRapid = this.data.eight.weapons.sidearms.rapid;
+                
+                this.smgHigh = this.data.eight.weapons.smgs.high;
+                this.smgMedium = this.data.eight.weapons.smgs.medium;
+                this.smgLow = this.data.eight.weapons.smgs.low;
+            }
+            if(r === 9){
+                this.autoHigh = this.data.nine.weapons.autos.high;
+                this.autoMedium = this.data.nine.weapons.autos.medium;
+                this.autoLow = this.data.nine.weapons.autos.low;
+                this.autoLowest = this.data.nine.weapons.autos.lowest;
+                
+                this.scoutHigh = this.data.nine.weapons.scouts.high;
+                this.scoutMedium = this.data.nine.weapons.scouts.medium;
+                this.scoutLow = this.data.nine.weapons.scouts.low;
+                this.scoutLowest = this.data.nine.weapons.scouts.lowest;
+                
+                this.pulseHigh = this.data.nine.weapons.pulses.high;
+                this.pulseMedium = this.data.nine.weapons.pulses.medium;
+                this.pulseLow = this.data.nine.weapons.pulses.low;
+                this.pulseLowest = this.data.nine.weapons.pulses.lowest;
+                
+                this.handHigh = this.data.nine.weapons.handcannons.high;
+                this.handMedium = this.data.nine.weapons.handcannons.medium;
+                this.handLow = this.data.nine.weapons.handcannons.low;
+                
+                this.sidearmHigh = this.data.nine.weapons.sidearms.high;
+                this.sidearmMedium = this.data.nine.weapons.sidearms.medium;
+                this.sidearmLow = this.data.nine.weapons.sidearms.low;
+                this.sidearmBurst = this.data.nine.weapons.sidearms.burst;
+                this.sidearmRapid = this.data.nine.weapons.sidearms.rapid;
+                
+                this.smgHigh = this.data.nine.weapons.smgs.high;
+                this.smgMedium = this.data.nine.weapons.smgs.medium;
+                this.smgLow = this.data.nine.weapons.smgs.low;
+            }
+            if(r === 10){
+                this.autoHigh = this.data.ten.weapons.autos.high;
+                this.autoMedium = this.data.ten.weapons.autos.medium;
+                this.autoLow = this.data.ten.weapons.autos.low;
+                this.autoLowest = this.data.ten.weapons.autos.lowest;
+                
+                this.scoutHigh = this.data.ten.weapons.scouts.high;
+                this.scoutMedium = this.data.ten.weapons.scouts.medium;
+                this.scoutLow = this.data.ten.weapons.scouts.low;
+                this.scoutLowest = this.data.ten.weapons.scouts.lowest;
+                
+                this.pulseHigh = this.data.ten.weapons.pulses.high;
+                this.pulseMedium = this.data.ten.weapons.pulses.medium;
+                this.pulseLow = this.data.ten.weapons.pulses.low;
+                this.pulseLowest = this.data.ten.weapons.pulses.lowest;
+                
+                this.handHigh = this.data.ten.weapons.handcannons.high;
+                this.handMedium = this.data.ten.weapons.handcannons.medium;
+                this.handLow = this.data.ten.weapons.handcannons.low;
+                
+                this.sidearmHigh = this.data.ten.weapons.sidearms.high;
+                this.sidearmMedium = this.data.ten.weapons.sidearms.medium;
+                this.sidearmLow = this.data.ten.weapons.sidearms.low;
+                this.sidearmBurst = this.data.ten.weapons.sidearms.burst;
+                this.sidearmRapid = this.data.ten.weapons.sidearms.rapid;
+                
+                this.smgHigh = this.data.ten.weapons.smgs.high;
+                this.smgMedium = this.data.ten.weapons.smgs.medium;
+                this.smgLow = this.data.ten.weapons.smgs.low;
+            }
+        }
+    });
+  </script>
+</dom-module>

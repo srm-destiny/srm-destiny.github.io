@@ -1,0 +1,666 @@
+{
+    "helmets": {
+        "one": {
+            "displayProperties": {
+                 "description": "\"I will forge you into a weapon stronger than any blade.\" - Lord Shaxx",
+                 "name": "Swordflight 4.1 Mask",
+                 "icon": "/common/destiny2_content/icons/de07b7c7f3af090163f440d24159c140.jpg",
+                 "screenshot": "/common/destiny2_content/screenshots/3223280471.jpg"
+             },
+            "perkSets":{
+                "perkOne": {
+                    "name": "Top Node",
+                    "mobility": 2,
+                    "resilience": 1,
+                    "recovery": 0
+                },
+                "perkTwo": {
+                    "name": "Bottom Node",
+                    "mobility": 2,
+                    "resilience": 0,
+                    "recovery": 1
+                }
+            },
+            "intrinsic": "Mobility",
+            "optional":{
+                "perkOne": {
+                    "perk": "Mobility",
+                    "set":{
+                        "mobility": "2",
+                        "resilience": "1",
+                        "recovery": "0"
+                    }
+                },
+                "perkTwo": {
+                    "perk": "Recovery",
+                    "set":{
+                        "mobility": "2",
+                        "resilience": "0",
+                        "recovery": "1"
+                    }
+                }
+            }
+        },
+        "two": {
+             "displayProperties": {
+                 "description": "\"I love the City. But I don't want to go back. I want to bring the City to the EDZ.\" - Devrim Kay",
+                 "name": "Wildwood Mask",
+                 "icon": "/common/destiny2_content/icons/9282b852dda02eb05814d5cfde07a7e4.jpg",
+                 "screenshot": "/common/destiny2_content/screenshots/3973359167.jpg"
+             },
+            "perkSets":{
+                "perkOne": {
+                    "name": "Top Node",
+                    "mobility": 1,
+                    "resilience": 2,
+                    "recovery": 0
+                },
+                "perkTwo": {
+                    "name": "Bottom Node",
+                    "mobility": 1,
+                    "resilience": 1,
+                    "recovery": 1
+                }
+            },
+            "intrinsic": "Heavy",
+            "optional":{
+                "perkOne": {
+                    "perk": "Heavy",
+                    "set":{
+                        "mobility": 1,
+                        "resilience": 2,
+                        "recovery": 0
+                    }
+                },
+                "perkTwo": {
+                    "perk": "Recovery",
+                    "set":{
+                        "mobility": 1,
+                        "resilience": 1,
+                        "recovery": 1
+                    }
+                }
+            }
+        },
+        "three": {
+             "displayProperties": {
+                 "description": "\"I need more data. Andâ... put the lab on yellow alert.\"  - Dr. Shanice Pell",
+                 "name": "Lost Pacific Mask",
+                 "icon": "/common/destiny2_content/icons/5ce711e376988502ca513a707a19dacf.jpg",
+                 "screenshot": "/common/destiny2_content/screenshots/1607012852.jpg"
+             },
+            "perkSets":{
+                "perkOne": {
+                    "name": "Top Node",
+                    "mobility": 2,
+                    "resilience": 1,
+                    "recovery": 0
+                },
+                "perkTwo": {
+                    "name": "Bottom Node",
+                    "mobility": 2,
+                    "resilience": 0,
+                    "recovery": 1
+                }
+            },
+            "intrinsic": "Mobility",
+            "optional":{
+                "perkOne": {
+                    "perk": "Heavy",
+                    "set":{
+                        "mobility": "2",
+                        "resilience": "1",
+                        "recovery": "0"
+                    }
+                },
+                "perkTwo": {
+                    "perk": "Recovery",
+                    "set":{
+                        "mobility": "2",
+                        "resilience": "0",
+                        "recovery": "1"
+                    }
+                }
+            }
+        },
+         "four": {
+             "displayProperties": {
+                 "description": "\"I used some of my own code to program this armor! But if you die, it's your fault. Not mine.\" - Failsafe",
+                 "name": "Exodus Down Mask",
+                 "icon": "/common/destiny2_content/icons/708a230e19d30ccf36e6b6cfc09128db.jpg",
+                 "screenshot": "/common/destiny2_content/screenshots/3026265798.jpg"
+             },
+             "perkSets":{
+                 "perkOne": {
+                     "name": "Top Node",
+                    "mobility": 1,
+                    "resilience": 1,
+                    "recovery": 0
+                },
+                "perkTwo": {
+                    "name": "Bottom Node",
+                    "mobility": 1,
+                    "resilience": 2,
+                    "recovery": 0
+                }
+            },
+            "intrinsic": "Heavy",
+            "optional":{
+                "perkOne": {
+                    "perk": "Heavy",
+                    "set":{
+                        "mobility": "1",
+                        "resilience": "2",
+                        "recovery": "0"
+                    }
+                },
+                "perkTwo": {
+                    "perk": "Recovery",
+                    "set":{
+                        "mobility": "1",
+                        "resilience": "1",
+                        "recovery": "1"
+                    }
+                }
+            }
+        }
+    },
+    "arms": {
+        "one": {
+             "displayProperties": {
+                 "description": "Fly faster. Cut deeper. Burn harder.",
+                 "name": "Swordflight 4.1 Grips",
+                 "icon": "/common/destiny2_content/icons/ac6a224c594be75ee17dd3f945c60e16.jpg",
+                 "screenshot": "/common/destiny2_content/screenshots/2296691422.jpg"
+             },
+            "perkSets":{
+                "perkOne": {
+                    "name": "Top Node",
+                    "mobility": 3,
+                    "resilience": 0,
+                    "recovery": 0
+                },
+                "perkTwo": {
+                    "name": "Bottom Node",
+                    "mobility": 2,
+                    "resilience": 1,
+                    "recovery": 0
+                }
+            },
+            "intrinsic": "Mobility",
+            "optional":{
+                "perkOne": {
+                    "perk": "Mobility",
+                    "set":{
+                        "mobility": "3",
+                        "resilience": "0",
+                        "recovery": "0"
+                    }
+                },
+                "perkTwo": {
+                    "perk": "Resilience",
+                    "set":{
+                        "mobility": "2",
+                        "resilience": "1",
+                        "recovery": "0"
+                    }
+                }
+            }
+        },
+        "two": {
+             "displayProperties": {
+                 "description": "\"I don't know about you, but the EDZ has grown on me. Literally. The moss gets everywhere.\" - Devrim Kay",
+                 "name": "Wildwood Grips",
+                 "icon": "/common/destiny2_content/icons/4617e163f8135e40541a1183789a2e8d.jpg",
+                 "screenshot": "/common/destiny2_content/screenshots/3907226374.jpg"
+             },
+            "perkSets":{
+                "perkOne": {
+                    "name": "Top Node",
+                    "mobility": 2,
+                    "resilience": 1,
+                    "recovery": 0
+                },
+                "perkTwo": {
+                    "name": "Bottom Node",
+                    "mobility": 1,
+                    "resilience": 2,
+                    "recovery": 0
+                }
+            },
+            "intrinsic": "Heavy",
+            "optional":{
+                "perkOne": {
+                    "perk": "Mobility",
+                    "set":{
+                        "mobility": "2",
+                        "resilience": "1",
+                        "recovery": "0"
+                    }
+                },
+                "perkTwo": {
+                    "perk": "Resilience",
+                    "set":{
+                        "mobility": "1",
+                        "resilience": "2",
+                        "recovery": "0"
+                    }
+                }
+            }
+        },
+        "three": {
+             "displayProperties": {
+                 "description": "\"Send a deep-space probe toward the anomaly. I want to know what it is.\" - Dr. Shanice Pell",
+                 "name": "Lost Pacific Grips",
+                 "icon": "/common/destiny2_content/icons/53839e7c051e4e590c5c0ab119b7bafa.jpg",
+                 "screenshot": "/common/destiny2_content/screenshots/479417869.jpg"
+             },
+            "perkSets":{
+                "perkOne": {
+                    "name": "Top Node",
+                    "mobility": 3,
+                    "resilience": 0,
+                    "recovery": 0
+                },
+                "perkTwo": {
+                    "name": "Bottom Node",
+                    "mobility": 2,
+                    "resilience": 1,
+                    "recovery": 0
+                }
+            },
+            "intrinsic": "Mobility",
+            "optional":{
+                "perkOne": {
+                    "perk": "Mobility",
+                    "set":{
+                        "mobility": "3",
+                        "resilience": "0",
+                        "recovery": "0"
+                    }
+                },
+                "perkTwo": {
+                    "perk": "Resilience",
+                    "set":{
+                        "mobility": "2",
+                        "resilience": "1",
+                        "recovery": "0"
+                    }
+                }
+            }
+        },
+         "four": {
+             "displayProperties": {
+                 "description": "\"Captain, the orbit of 7066 Nessus is different from what the Cosmodrome calculated.\" - Flight Officer Samantha Blaise",
+                 "name": "Exodus Down Grips",
+                 "icon": "/common/destiny2_content/icons/9e1f30ef56c44e590d92409394f343b1.jpg",
+                 "screenshot": "/common/destiny2_content/screenshots/2423003287.jpg"
+             },
+             "perkSets":{
+                 "perkOne": {
+                     "name": "Top Node",
+                    "mobility": 2,
+                    "resilience": 1,
+                    "recovery": 0
+                },
+                "perkTwo": {
+                    "name": "Bottom Node",
+                    "mobility": 1,
+                    "resilience": 2,
+                    "recovery": 0
+                }
+            },
+            "intrinsic": "Heavy",
+            "optional":{
+                "perkOne": {
+                    "perk": "Mobility",
+                    "set":{
+                        "mobility": "2",
+                        "resilience": "1",
+                        "recovery": "0"
+                    }
+                },
+                "perkTwo": {
+                    "perk": "Resilience",
+                    "set":{
+                        "mobility": "1",
+                        "resilience": "2",
+                        "recovery": "0"
+                    }
+                }
+            }
+        }
+    },
+    "chests": {
+        "one": {
+             "displayProperties": {
+                 "description": "The hotter you burn, the stronger you become.",
+                 "name": "Swordflight 4.1 Vest",
+                 "icon": "/common/destiny2_content/icons/dc0ccaf2f50df6e27b75b8203eb6537d.jpg",
+                 "screenshot": "/common/destiny2_content/screenshots/2718495762.jpg"
+             },
+            "perkSets":{
+                "perkOne": {
+                    "name": "Top Node",
+                    "mobility": 2,
+                    "resilience": 2,
+                    "recovery": 0
+                },
+                "perkTwo": {
+                    "name": "Bottom Node",
+                    "mobility": 2,
+                    "resilience": 1,
+                    "recovery": 1
+                }
+            },
+            "intrinsic": "Mobility",
+            "optional":{
+                "perkOne": {
+                    "perk": "Resilience",
+                    "set":{
+                        "mobility": "2",
+                        "resilience": "2",
+                        "recovery": "0"
+                    }
+                },
+                "perkTwo": {
+                    "perk": "Recovery",
+                    "set":{
+                        "mobility": "2",
+                        "resilience": "1",
+                        "recovery": "1"
+                    }
+                }
+            }
+        },
+        "two": {
+             "displayProperties": {
+                 "description": "\"Perhaps we can take it back. You know? Perhaps the Farm can be another City.\" - Devrim Kay",
+                 "name": "Wildwood Vest",
+                 "icon": "/common/destiny2_content/icons/4f3ad5f3739ac2e4798ece56032ccc5a.jpg",
+                 "screenshot": "/common/destiny2_content/screenshots/2729740202.jpg"
+             },
+            "perkSets":{
+                "perkOne": {
+                    "name": "Top Node",
+                    "mobility": 1,
+                    "resilience": 3,
+                    "recovery": 0
+                },
+                "perkTwo": {
+                    "name": "Bottom Node",
+                    "mobility": 1,
+                    "resilience": 2,
+                    "recovery": 1
+                }
+            },
+            "intrinsic": "Heavy",
+            "optional":{
+                "perkOne": {
+                    "perk": "Resilience",
+                    "set":{
+                        "mobility": "1",
+                        "resilience": "3",
+                        "recovery": "0"
+                    }
+                },
+                "perkTwo": {
+                    "perk": "Recovery",
+                    "set":{
+                        "mobility": "1",
+                        "resilience": "2",
+                        "recovery": "1"
+                    }
+                }
+            }
+        },
+        "three": {
+             "displayProperties": {
+                 "description": "\"The probe's initial data makes no sense. And then the signal died. What have we found?\" - Dr. Shanice Pell",
+                 "name": "Lost Pacific Vest",
+                 "icon": "/common/destiny2_content/icons/da2e791e0a7d124dc86559eb558c3b63.jpg",
+                 "screenshot": "/common/destiny2_content/screenshots/2380978355.jpg"
+             },
+            "perkSets":{
+                "perkOne": {
+                    "name": "Top Node",
+                    "mobility": 2,
+                    "resilience": 2,
+                    "recovery": 0
+                },
+                "perkTwo": {
+                    "name": "Bottom Node",
+                    "mobility": 2,
+                    "resilience": 1,
+                    "recovery": 1
+                }
+            },
+            "intrinsic": "Mobility",
+            "optional":{
+                "perkOne": {
+                    "perk": "Resilience",
+                    "set":{
+                        "mobility": "2",
+                        "resilience": "2",
+                        "recovery": "0"
+                    }
+                },
+                "perkTwo": {
+                    "perk": "Recovery",
+                    "set":{
+                        "mobility": "2",
+                        "resilience": "1",
+                        "recovery": "1"
+                    }
+                }
+            }
+        },
+         "four": {
+             "displayProperties": {
+                 "description": "\"Adjust course two degrees. It's a long way to Kepler-186, folks. We don't have time to tour Nessus.\" - Capt. Masoud Jacobson",
+                 "name": "Exodus Down Vest",
+                 "icon": "/common/destiny2_content/icons/63361eee15b9dfffeee4d953ba6e6953.jpg",
+                 "screenshot": "/common/destiny2_content/screenshots/2462524641.jpg"
+             },
+             "perkSets":{
+                 "perkOne": {
+                     "name": "Top Node",
+                    "mobility": 1,
+                    "resilience": 3,
+                    "recovery": 0
+                },
+                "perkTwo": {
+                    "name": "Bottom Node",
+                    "mobility": 1,
+                    "resilience": 2,
+                    "recovery": 1
+                }
+            },
+            "intrinsic": "Heavy",
+            "optional":{
+                "perkOne": {
+                    "perk": "Resilience",
+                    "set":{
+                        "mobility": "1",
+                        "resilience": "3",
+                        "recovery": "0"
+                    }
+                },
+                "perkTwo": {
+                    "perk": "Recovery",
+                    "set":{
+                        "mobility": "1",
+                        "resilience": "2",
+                        "recovery": "1"
+                    }
+                }
+            }
+        }
+    },
+    "legs": {
+        "one": {
+             "displayProperties": {
+                 "description": "\"It's not a game. ...Well, it is a game. But it's more than that. Ah, Shaxx says it better. Go ask him.\" - Cayde-6",
+                 "name": "Swordflight 4.1 Legs",
+                 "icon": "/common/destiny2_content/icons/f7ab019fb8e2396448260d3b0a669a71.jpg",
+                 "screenshot": "/common/destiny2_content/screenshots/3140634552.jpg"
+             },
+            "perkSets":{
+                "perkOne": {
+                    "name": "Top Node",
+                    "mobility": 3,
+                    "resilience": 0,
+                    "recovery": 0
+                },
+                "perkTwo": {
+                    "name": "Bottom Node",
+                    "mobility": 2,
+                    "resilience": 1,
+                    "recovery": 0
+                }
+            },
+            "intrinsic": "Mobility",
+            "optional":{
+                "perkOne": {
+                    "perk": "Mobility",
+                    "set":{
+                        "mobility": "3",
+                        "resilience": "0",
+                        "recovery": "0"
+                    }
+                },
+                "perkTwo": {
+                    "perk": "Resilience",
+                    "set":{
+                        "mobility": "2",
+                        "resilience": "1",
+                        "recovery": "0"
+                    }
+                }
+            }
+        },
+        "two": {
+             "displayProperties": {
+                 "description": "\"Be careful out there. If a rescue happens, I'd rather be the rescuee than the one doing the rescuing.\" - Devrim Kay",
+                 "name": "Wildwood Strides",
+                 "icon": "/common/destiny2_content/icons/54179b7740a7ab4aa5e6668903d48f16.jpg",
+                 "screenshot": "/common/destiny2_content/screenshots/3466255616.jpg"
+             },
+            "perkSets":{
+                "perkOne": {
+                    "name": "Top Node",
+                    "mobility": 2,
+                    "resilience": 1,
+                    "recovery": 0
+                },
+                "perkTwo": {
+                    "name": "Bottom Node",
+                    "mobility": 1,
+                    "resilience": 2,
+                    "recovery": 0
+                }
+            },
+            "intrinsic": "Heavy",
+            "optional":{
+                "perkOne": {
+                    "perk": "Mobility",
+                    "set":{
+                        "mobility": "2",
+                        "resilience": "1",
+                        "recovery": "0"
+                    }
+                },
+                "perkTwo": {
+                    "perk": "Resilience",
+                    "set":{
+                        "mobility": "1",
+                        "resilience": "2",
+                        "recovery": "0"
+                    }
+                }
+            }
+        },
+        "three": {
+             "displayProperties": {
+                 "description": "\"This research has to get out. Even if I don't. People have to know what this 'anomaly' is.\" - Last Recording of Dr. Shanice Pell",
+                 "name": "Lost Pacific Strides",
+                 "icon": "/common/destiny2_content/icons/cc803c0e18d7bd26a6e1dbfc2fe83d69.jpg",
+                 "screenshot": "/common/destiny2_content/screenshots/1150216911.jpg"
+             },
+            "perkSets":{
+                "perkOne": {
+                    "name": "Top Node",
+                    "mobility": 3,
+                    "resilience": 0,
+                    "recovery": 0
+                },
+                "perkTwo": {
+                    "name": "Bottom Node",
+                    "mobility": 2,
+                    "resilience": 1,
+                    "recovery": 0
+                }
+            },
+            "intrinsic": "Mobility",
+            "optional":{
+                "perkOne": {
+                    "perk": "Mobility",
+                    "set":{
+                        "mobility": "3",
+                        "resilience": "0",
+                        "recovery": "0"
+                    }
+                },
+                "perkTwo": {
+                    "perk": "Resilience",
+                    "set":{
+                        "mobility": "2",
+                        "resilience": "1",
+                        "recovery": "0"
+                    }
+                }
+            }
+        },
+         "four": {
+             "displayProperties": {
+                 "description": "\"We might be stopping at Nessus after all. We just lost the starboard engine.\" - Chief Eng. Kaoru Zuykova",
+                 "name": "Exodus Down Strides",
+                 "icon": "/common/destiny2_content/icons/cb04ab663267164e28dd05df7a420f65.jpg",
+                 "screenshot": "/common/destiny2_content/screenshots/3807183801.jpg"
+             },
+             "perkSets":{
+                 "perkOne": {
+                     "name": "Top Node",
+                    "mobility": 2,
+                    "resilience": 1,
+                    "recovery": 0
+                },
+                "perkTwo": {
+                    "name": "Bottom Node",
+                    "mobility": 1,
+                    "resilience": 2,
+                    "recovery": 0
+                }
+            },
+            "intrinsic": "Heavy",
+            "optional":{
+                "perkOne": {
+                    "perk": "Mobility",
+                    "set":{
+                        "mobility": "2",
+                        "resilience": "1",
+                        "recovery": "0"
+                    }
+                },
+                "perkTwo": {
+                    "perk": "Resilience",
+                    "set":{
+                        "mobility": "1",
+                        "resilience": "2",
+                        "recovery": "0"
+                    }
+                }
+            }
+        }
+    }
+}

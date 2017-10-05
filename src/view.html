@@ -1,0 +1,226 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/paper-toolbar/paper-toolbar.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="resilence-stat.html">
+<link rel="import" href="find-armor.html">
+
+<dom-module id="main-view" class="layout">
+  <template>
+    <style>
+        :host {
+            width:100%;
+        }
+        .top{
+            position: absolute;
+            margin: auto;
+            top: 80px;
+            right: 0;
+            left: 0;
+            width:80%;
+        }
+        .body{
+            margin-left: 5px;
+            min-width: fit-content;
+            width: calc(100% - 40px);
+            margin-top: 10px;
+        }
+        .right{
+            width:auto
+            float: right;
+            z-index: 9999;
+        }
+        paper-toolbar{
+            background-color: #121212
+        }
+        #searchInput{
+            width:150px;
+            --paper-input-container-input-color: #ddd;
+            --paper-input-container-focus-color:#FFF;
+            --paper-input-container-underline{
+                border-bottom:14px;
+            }
+        }
+        #searchBtn{
+            right:0;
+          background-image: url(/src/search.svg);
+            height:20px;
+            width:20px;
+            fill:white;
+            border:none;
+            background-color:transparent
+        }
+        .emblemSelect{
+            padding-left:10px;
+            padding-right:10px;
+            background-color:#ddd;
+            margin:5px;
+            min-width: fit-content;
+            width: calc(100% - 75px);
+        }
+        
+        #leftStats{
+            width:19%;
+            min-height: 20px;
+            margin-right: 5px;
+            display:inline-block;
+            background-color: #ddd;
+            vertical-align: top;
+        }
+        #rightStats{
+            width: 79%;
+            min-height:20px;
+            display:inline-block;
+            background-color: #ddd;
+        }
+        .statSet{
+            position: relative;
+            padding-left:4px;
+        }
+        .minibar{
+            background-color: rgba(0,0,0,0.1);
+            height:45px;
+            --paper-toolbar-height:45px;
+        }
+        .sub-title{
+            z-index:999;
+        }
+        @media screen and (max-width: 575px){
+            :host{
+                width: calc(100% - 8px);
+            }
+        }
+    </style>
+      <paper-toolbar>
+          <span slot="top" class="title">SRM</span>
+          <template is="dom-if" if="{{characterSearch}}">
+              <paper-input slot="top" 
+                           float-label
+                           label="Character"
+                           id="searchInput" 
+                           value="{{character2}}">
+              </paper-input>
+              <button slot="top" id="searchBtn" on-tap="passCharacter"></button>
+          </template>
+          <template is="dom-if" if="{{armorSearch}}">
+              <paper-input slot="top" 
+                           id="searchInput" 
+                           float-label 
+                           label="Mobility" 
+                           value="{{mobility2}}">
+              </paper-input>
+              <paper-input slot="top" 
+                           id="searchInput"
+                           float-label 
+                           label="Resilience" 
+                           value="{{resilience2}}">
+              </paper-input>
+              <paper-input slot="top" 
+                           id="searchInput"
+                           float-label 
+                           label="Recovery" 
+                           value="{{recovery2}}">
+              </paper-input>
+              <button slot="top" id="searchBtn" on-tap="passArmor"></button>
+          </template>
+          
+      </paper-toolbar>
+       <paper-toolbar class="minibar">
+           <a href="#" on-tap="showResilence" slot="top" class="sub-title" style="margin-right:10px;">Time to Kill</a>
+           <a href="#" on-tap="showArmor" slot="top" class="sub-title">Find Armor</a>
+      </paper-toolbar>
+      
+      <resilence-stat character="{{character}}" 
+                      id="resilence" 
+                      style="display:none">
+      </resilence-stat>
+      <find-armor mobility="{{mobility}}"
+                  resilience="{{resilience}}"
+                  recovery="{{recovery}}"
+                  id="armor" style="display:none"></find-armor>
+  </template>
+
+  <script>
+    Polymer({
+        is: 'main-view',
+        properties: {
+            character: {
+                type:String,
+                notify:true
+            },
+            character2: {
+                type:String,
+                notify:true
+            },
+            mobility: {
+                type: Number,
+                notify:true
+            },
+            mobility2: {
+                type: Number,
+                notify:true
+            },
+            resilience: {
+                type: Number,
+                notify:true
+            },
+            resilience2: {
+                type: Number,
+                notify:true
+            },
+            recovery: {
+                type: Number,
+                notify:true
+            },
+            recovery2: {
+                type: Number,
+                notify:true
+            },
+            characterSearch: {
+                type: Boolean,
+                value: true,
+                notify:true
+            },
+            armorSearch: {
+                type: Boolean,
+                notify: true
+            }
+        },
+        passCharacter: function(){
+            this.character = this.character2
+        },
+        passArmor: function(){
+            this.mobility = this.mobility2;
+            this.resilience = this.resilience2;
+            this.recovery = this.recovery2;
+        },
+        showResilence: function(){
+            this.$.resilence.style.display = "block";
+            this.$.armor.style.display = "none";
+            this.armorSearch = false;
+            this.characterSearch = true;
+        },
+        showArmor: function(){
+            this.$.resilence.style.display = "none";
+            this.$.armor.style.display = "block";
+            this.armorSearch = true;
+            this.characterSearch = false;
+        }
+        
+    });
+  </script>
+</dom-module>
+
+
+

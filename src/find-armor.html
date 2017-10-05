@@ -1,0 +1,257 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../bower_components/paper-toolbar/paper-toolbar.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/dom-repeat-n/dom-repeat-n.html">
+<link rel="import" href="../src/item-cards.html">
+
+<dom-module id="find-armor" class="layout">
+  <template>
+    <style>
+        
+        :host {
+            width:100%;
+        }
+        .top{
+            position: absolute;
+            margin: auto;
+            top: 80px;
+            right: 0;
+            left: 0;
+            width:80%;
+        }
+        .body{
+            margin-left: 5px;
+            min-width: fit-content;
+            width: calc(100% - 40px);
+            margin-top: 10px;
+        }
+        .right{
+            width:auto
+            float: right;
+            z-index: 9999;
+        }
+        paper-toolbar{
+            background-color: #121212
+        }
+        #searchInput{
+            width:150px;
+            --paper-input-container-input-color: #ddd;
+            --paper-input-container-focus-color:#FFF;
+            --paper-input-container-underline{
+                border-bottom:14px;
+            }
+        }
+        #searchBtn{
+            right:0;
+        }
+        .emblemSelect{
+            padding-left:10px;
+            padding-right:10px;
+            background-color:#ddd;
+            margin:5px;
+            min-width: fit-content;
+            width: calc(100% - 75px);
+        }
+        
+        #leftStats{
+            width:19%;
+            min-height: 20px;
+            margin-right: 5px;
+            display:inline-block;
+            background-color: #ddd;
+            vertical-align: top;
+        }
+        #rightStats{
+            width: 79%;
+            min-height:20px;
+            display:inline-block;
+            background-color: #ddd;
+        }
+        .statSet{
+            position: relative;
+            padding-left:4px;
+        }
+        @media screen and (max-width: 575px){
+            :host{
+                width: calc(100% - 8px);
+            }
+        }
+        .item-container{
+            display:inline-block;
+            height: calc(100vh - 116px);
+            overflow-y: auto;
+            text-align: center;
+        }
+        .input{
+            width:75px;
+        }
+    </style>
+      <iron-ajax auto
+                 url='hunter.json'
+                 handle-as="json"
+                 last-response='{{data}}'>
+      </iron-ajax>      
+      <div class="item-container">
+              <template id="repeat" is="dom-repeat" items="{{dataSet}}">
+                  <item-card helmet="{{item.helmet}}"
+                             helmet-perk="{{item.helmetPerk}}"
+                             arm="{{item.arm}}"
+                             arm-perk="{{item.armPerk}}"
+                             chest="{{item.chest}}"
+                             chest-perk="{{item.chestPerk}}"
+                             leg="{{item.leg}}"
+                             leg-perk="{{item.legPerk}}">
+                  </item-card>
+              </template>
+          <h1 id="nothing" style="display:none;">Hmmm.. couldn't find any matches.</h1>
+      </div>
+  </template>
+
+  <script>
+    Polymer({
+        is: 'find-armor',
+        properties: {
+            resilience: {
+                type: Number,
+                //observer: "_checkResilience"
+            },
+            recovery: {
+                type: Number,
+                //observer: "_checkRecovery"
+            },
+            mobility: {
+                type: Number,
+                observer: "_runSearch"
+            },
+            data: {
+                type: Object
+            },
+            dataSet: {
+                type: Array,
+                value: "[]",
+                
+            },
+            dataSet2: {
+                type: Array,
+                value: "[]",
+                notify: true
+            },
+            screenshot:{
+                value: "{{item.arm.displayProperties.screenshot}}"
+            }
+        },
+        loadMore: function() {
+            ironScrollTheshold.clearTriggers();
+        },
+        showData: function(){
+            data = this.dataSet
+            seen = this.dataSet;
+            seen2 = [];
+            for(var listing in data){
+                for(var seening in seen){
+                    if(data[listing] == seen[seening]){
+                        console.log("already in... removing");
+                        delete data[listing]
+                    } else{
+                        seen2.push(seen[seening])
+                    }
+                }    
+            }
+            this.dataSet2 = seen2;
+            console.log(this.dataSet2)
+        },
+        _runSearch: function(){
+            mobility = this.mobility;
+            resilience = this.resilience;
+            recovery = this.recovery;
+            dataSet = [];
+            for (var helmet in this.data.helmets){
+                //Iterate through all helmets
+                for(var helmetsperks in this.data.helmets[helmet].perkSets){  
+                    //Iterate through each helmet perk tree
+                    console.log()
+                    hm = this.data.helmets[helmet].perkSets[helmetsperks].mobility;
+                    hr = this.data.helmets[helmet].perkSets[helmetsperks].resilience;
+                    hry = this.data.helmets[helmet].perkSets[helmetsperks].recovery;
+                   
+                    for(var arm in this.data.arms){
+                        //Iterate through all arms
+                        for(var armsperks in this.data.arms[arm].perkSets){
+                            //Iterate through each arm perk tree
+                            am = this.data.arms[arm].perkSets[armsperks].mobility
+                            ar = this.data.arms[arm].perkSets[armsperks].resilience
+                            ary = this.data.arms[arm].perkSets[armsperks].recovery
+                            
+                            for(var chest in this.data.chests){
+                                //Iterate through all chests
+                                for(var chestsperks in this.data.chests[chest].perkSets){
+                                    //Iterate through each chest perk tree
+                                    cm = this.data.chests[chest].perkSets[chestsperks].mobility
+                                    cr = this.data.chests[chest].perkSets[chestsperks].resilience
+                                    cry = this.data.chests[chest].perkSets[chestsperks].recovery
+                                    
+                                    for(var leg in this.data.legs){
+                                        //Iterate through all legs
+                                        for(var legsperks in this.data.legs[leg].perkSets){
+                                            //Iterate through each chest perk tree
+                                            lm = this.data.legs[leg].perkSets[legsperks].mobility
+                                            lr = this.data.legs[leg].perkSets[legsperks].resilience
+                                            lry = this.data.legs[leg].perkSets[legsperks].recovery
+                                            
+                                            if(hm + am + cm + lm >= this.mobility){
+                                                if(hr + ar + cr + lr >= this.resilience){
+                                                    if(hry + ary + cry + lry >= this.recovery){
+                                                        dataSet.push({
+                                                            helmet: this.data.helmets[helmet], 
+                                                            helmetPerk: this.data.helmets[helmet].perkSets[helmetsperks].name, 
+                                                            arm: this.data.arms[arm], 
+                                                            armPerk: this.data.arms[arm].perkSets[armsperks].name,
+                                                            chest: this.data.chests[chest], 
+                                                            chestPerk: this.data.chests[chest].perkSets[chestsperks].name, 
+                                                            leg: this.data.legs[leg], 
+                                                            legPerk: this.data.legs[leg].perkSets[legsperks].name
+                                                        })
+                                                        this.$.nothing.style.display = "none"
+                                                    } 
+                                                }
+                                            }else{
+                                                this.$.nothing.style.display = "block"
+                                            }
+                                        }
+                                    }
+                                }
+                            }                           
+                        }                            
+                    }
+                }
+                
+            }
+            this.dataSet = dataSet
+            this.$.repeat.domChange
+        }
+        
+         /*if(hm + am == answer){
+                                console.log("Helmet: " + this.data.helmets[helmet].displayProperties.name)
+                                console.log("Arm: " + this.data.arms[arm].displayProperties.name)
+                                console.log("Set Found. Total Mobility: " + (hm + am));
+                                console.log("");
+                                console.log("")
+                            }
+        */
+    });
+  </script>
+</dom-module>

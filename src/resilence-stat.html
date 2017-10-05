@@ -1,0 +1,223 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="table-data.html">
+<link rel="import" href="character-selection.html">
+
+
+<dom-module id="resilence-stat">
+  <template>
+    <style>
+        
+        :host {
+            width:100%;
+        }
+        .top{
+            position: absolute;
+            margin: auto;
+            top: 115px;
+            right: 0;
+            left: 0;
+            width:80%;
+        }
+        <h1>Hello<
+        .body{
+            margin-left: 5px;
+            min-width: fit-content;
+            width: calc(100% - 40px);
+            margin-top: 10px;
+        }
+        .right{
+            width:auto
+            float: right;
+            z-index: 9999;
+        }
+        paper-toolbar{
+            background-color: #121212
+        }
+        #searchInput{
+            width:150px;
+            --paper-input-container-input-color: #ddd;
+            --paper-input-container-focus-color:#FFF;
+            --paper-input-container-underline{
+                border-bottom:14px;
+            }
+        }
+        #searchBtn{
+            right:0;
+        }
+        .emblemSelect{
+            padding-left:10px;
+            padding-right:10px;
+            background-color:#ddd;
+            margin-bottom:5px;
+            min-width: fit-content;
+            width: calc(100% - 75px);
+        }
+        
+        #leftStats{
+            width:19%;
+            min-height: 20px;
+            margin-right: 5px;
+            display:inline-block;
+            background-color: #ddd;
+            vertical-align: top;
+        }
+        #rightStats{
+            width: calc(79% - 37px);
+            min-height:20px;
+            display:inline-block;
+            background-color: #ddd;
+        }
+        .statSet{
+            position: relative;
+            padding-left:4px;
+        }
+        @media screen and (max-width: 575px){
+            :host{
+                width: calc(100% - 8px);
+            }
+        }
+    </style>
+          <iron-ajax id="findMemId"
+                     url='https://www.bungie.net/Platform/Destiny2/SearchDestinyPlayer/2/{{character}}/'
+                     headers='{"X-API-Key": "e2b07e65d23b490e9e0f9d169a32160b"}'
+                     method="get"
+                     handle-as="json"
+                     last-response='{{jsonMems}}'>
+          </iron-ajax>
+          <iron-ajax 
+                     auto
+                     url='https://www.bungie.net/Platform/Destiny2/2/Profile/{{membershipId}}'
+                     params='{"components":"100"}'
+                     headers='{"X-API-Key": "e2b07e65d23b490e9e0f9d169a32160b"}'
+                     method="get"
+                     handle-as="json"
+                     last-response='{{jsonChars}}'>
+          </iron-ajax>
+         <div class="top">
+             <div class="emblemSelect">
+                 <template is="dom-repeat" items="{{jsonChars.Response.profile.data.characterIds}}">
+                     <character-selection charid="[[item]]" memid="[[membershipId]]" selchar="{{selectedChar}}"></character-selection>
+                 </template>
+             </div>
+             <template is="dom-if" if="{{selectedChar}}">
+                 <iron-ajax auto
+                            id="findChars"
+                            url='https://www.bungie.net/Platform/Destiny2/2/Profile/[[membershipId]]/Character/[[selectedChar]]'
+                            params='{"components":"200"}'
+                            headers='{"X-API-Key": "e2b07e65d23b490e9e0f9d169a32160b"}'
+                            method="get"
+                            handle-as="json"
+                            last-response='{{jsonStats}}'></iron-ajax>
+                 <div class="body">
+                     <div id="leftStats">
+                         <div class="statSet">
+                             <template is="dom-if" if="{{jsonStats.Response.character.data.stats.2996146975}}"> 
+                                 <img class="statImg" src="../img/mobility.png">
+                                 <div style="display: inline-block;vertical-align: top;padding-top: 5px;padding-left: 5px;">
+                                     <span style="display:block">Mobility: </span>
+                                     <span>{{jsonStats.Response.character.data.stats.2996146975}}</span>
+                                 </div>
+                             </template>
+                         </div>
+                         <div class="statSet">
+                             <template is="dom-if" if="{{jsonStats.Response.character.data.stats.392767087}}">
+                                 <img class="statImg" src="../img/resilience.png">
+                                 <div style="display: inline-block;vertical-align: top;padding-top: 5px;padding-left: 5px;">
+                                     <span style="display:block">Resilience: </span>
+                                     <span>{{jsonStats.Response.character.data.stats.392767087}}</span>
+                                 </div>
+                             </template>
+                         </div>
+                         <div class="statSet">
+                             <template is="dom-if" if="{{jsonStats.Response.character.data.stats.1943323491}}"> 
+                                 <img class="statImg" src="../img/recovery.png">
+                                 <div style="display: inline-block;vertical-align: top;padding-top: 5px;padding-left: 5px;">
+                                     <span style="display:block">Recovery: </span>
+                                     <span>{{jsonStats.Response.character.data.stats.1943323491}}</span>
+                                 </div>
+                             </template>
+                          </div>
+                     </div>
+                     <div id="rightStats">
+                         <table-data resilence="{{jsonStats.Response.character.data.stats.392767087}}"></table-data>
+                     </div>
+                 </div>
+             </template>
+      </div>
+  </template>
+
+  <script>
+    Polymer({
+        is: 'resilence-stat',
+        properties: {
+            character: {
+                type:String,
+                notify:true,
+                observer: '_runAjax'
+            },
+            jsonMems: {
+                type: Object,
+                observer: '_passMemId'
+            },
+            membershipId: {
+                type: String,
+                observer: '_findCharacters'
+            },
+            characterId: {},
+            jsonChars: {
+                type: Object,
+                value: "",
+            },
+            jsonCharData: {
+                type: Object,
+                value: "",
+                observer: '_readCharData'
+            },
+            jsonStats: {
+                type: Object
+            },
+            selectedChar: {
+                type: String
+            },
+            data: {
+                type: Array,
+                observer: '_testing'
+            }
+        },
+        
+        _testing: function(){
+            console.log(this.data)
+        },
+        _runAjax: function(){
+            this.$.findMemId.generateRequest();
+        },
+        _passMemId: function(){
+           if(this.jsonMems != null){
+               this.membershipId = this.jsonMems.Response[0].membershipId
+           }
+        },
+        _findCharacters: function(){
+            this.$.findChars.generateRequest();
+        },
+        _readCharData: function(){
+            console.log(this.jsonCharData)
+        },
+        getStats: function(charid){
+            console.log(charid);
+        },
+        computeTable: function(stat){
+            if(stat === 6){
+                console.log("Working as intended")
+                Polymer.dom(this.$.table).innerHTML = "<tr><td>Jill</td></tr>"
+            }
+        }
+    });
+  </script>
+</dom-module>
+
+
+

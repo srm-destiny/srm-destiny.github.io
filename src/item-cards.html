@@ -1,0 +1,121 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+
+<dom-module id="item-card" class="layout">
+  <template>
+      <style>
+          .top-list{
+              display:block;
+          }
+          .bottom-list{
+              display:block;
+          }
+          .item{
+            text-align: center;
+            margin-left: 10px;
+              margin-top:10px;
+            margin-right: 10px;
+            display:inline-block;
+            font-size:12px;
+              width:40%;
+        }
+        .card{
+            margin:5px;
+            display: inline-block;
+            background: #fff;
+            border-radius: .5rem;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24)
+        }
+          #ss{
+              height:200px;
+          }
+        .ss-holder{
+            height:200px;
+            width:355.5px;
+            background-color:#dbdbdb;
+        }
+      </style>
+      <div class="card">
+          <div class="ss-holder">
+              <img id="ss" src="{{screenshot}}">
+          </div>
+          <div class="top-list">
+              <div class="item" on-tap="_showHelmetSs">
+                  <img src="https://bungie.net{{helmet.displayProperties.icon}}" style="width:50px; height:50px;">
+                  <p>{{helmet.displayProperties.name}}</p>
+                  <p>{{helmetPerk}}</p>
+              </div>
+              <div class="item" on-tap="_showArmSs">
+                  <img src="https://bungie.net{{arm.displayProperties.icon}}" style="width:50px; height:50px;">
+                  <p>{{arm.displayProperties.name}}</p>
+                  <p>{{armPerk}}</p>
+              </div>
+          </div>
+          <div class="bottom-list">
+              <div class="item" on-tap="_showChestSs">
+                  <img src="https://bungie.net{{chest.displayProperties.icon}}" style="width:50px; height:50px;">
+                  <p>{{chest.displayProperties.name}}</p>
+                  <p>{{chestPerk}}</p>
+              </div>
+              <div class="item" on-tap="_showLegSs">
+                  <img src="https://bungie.net{{leg.displayProperties.icon}}" style="width:50px; height:50px;">
+                  <p>{{leg.displayProperties.name}}</p>
+                  <p>{{legPerk}}</p>
+              </div>
+          </div>
+      </div> 
+  </template>
+
+  <script>
+    Polymer({
+        is: 'item-card',
+        properties: {
+            helmet:{
+                type: Object,
+                notify: true
+            },
+            arm:{
+                type: Object,
+                notify: true
+            },
+            chest:{
+                type: Object,
+                notify: true
+            },
+            leg:{
+                type: Object,
+                notify: true
+            },
+            helmetPerk:{
+                type: Object,
+                notify: true
+            },
+            armPerk:{
+                type: Object,
+                notify: true
+            },
+            chestPerk:{
+                type: Object,
+                notify: true
+            },
+            legPerk:{
+                type: Object,
+                notify: true
+            }
+        },
+        _showHelmetSs: function(e){
+            this.screenshot = "https://bungie.net" + this.helmet.displayProperties.screenshot
+        },
+        _showArmSs: function(e){
+            this.screenshot = "https://bungie.net" + this.arm.displayProperties.screenshot
+        },
+        _showChestSs: function(e){
+            this.screenshot = "https://bungie.net" + this.chest.displayProperties.screenshot
+        },
+        _showLegSs: function(e){
+            this.screenshot = "https://bungie.net" + this.leg.displayProperties.screenshot
+        }
+    });
+  </script>
+</dom-module>

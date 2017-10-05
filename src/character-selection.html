@@ -1,0 +1,120 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+
+<dom-module id="character-selection" class="layout">
+  <template>
+      <style>
+          .emblem{
+              padding-top: 10px;
+              padding-bottom: 4px;
+              display:inline-block;
+              max-height: 96px;
+              cursor: pointer;
+              position: relative;
+              top:0;
+              left:0;
+
+            }
+          .actualEmblem{
+              width: 420px;
+          }
+          #stats{
+              pointer-events: none;
+              position: absolute;
+              color: white;
+              bottom: 15px;
+              width: 420px;
+              -webkit-touch-callout: none;
+              -webkit-user-select: none;
+              -khtml-user-select: none
+              -moz-user-select: none;
+              -ms-user-select: none;
+              user-select: none;
+          }
+          #charInfo{
+              position: relative;
+              left: 90px;
+          }
+          #lightLevel{
+              position: absolute;
+              right: 20px;
+              top: -40px;
+              font-size: 24px;
+              color:#41eacf;
+          }
+      </style>
+      <iron-ajax auto
+                 id="findChars"
+                 url='https://www.bungie.net/Platform/Destiny2/2/Profile/[[memid]]/Character/[[charid]]'
+                 params='{"components":"200"}'
+                 headers='{"X-API-Key": "e2b07e65d23b490e9e0f9d169a32160b"}'
+                 method="get"
+                 handle-as="json"
+                 last-response='{{jsonCharData}}'>
+      </iron-ajax>
+      <div class="emblem" id="{{jsonCharData.Response.character.data.characterId}}" on-tap="getStats">
+          <div id="stats">
+              <p id="charInfo">Lv. 
+                  <span>[[jsonCharData.Response.character.data.levelProgression.level]]</span>
+                  <span>{{computeRace(jsonCharData.Response.character.data.raceHash)}}</span>
+                  <span>{{computeClass(jsonCharData.Response.character.data.classHash)}}</span>
+              </p>
+              <div id="lightLevel">
+                <p><span>✦</span> [[jsonCharData.Response.character.data.light]]</p>
+              </div>
+              
+          </div>
+              <img class="actualEmblem" src="https://www.bungie.net{{jsonCharData.Response.character.data.emblemBackgroundPath}}">
+      </div>
+  </template>
+
+  <script>
+    Polymer({
+        is: 'character-selection',
+        properties: {
+            memid: {
+                type: String,
+                notify: true
+            },
+            charid: {
+                type: String,
+                notify:true
+            },
+            selchar: {
+                type:String,
+                notify: true
+            },
+            jsonCharData: {
+                type: Object
+            }
+            
+        },
+        getStats: function(e){
+            console.log()
+           this.selchar = e.path[1].id
+        },
+        computeRace: function(hash){
+            if(hash === 898834093){
+                return "Exo"
+            }
+            if(hash === 3887404748){
+                return "Human"
+            }
+            if(hash === 2803282938){
+                return "Awoken"
+            }
+        },
+        computeClass: function(hash){
+            if(hash === 2271682572){
+                return "Warlock"
+            }
+            if(hash === 671679327){
+                return "Hunter"
+            }
+            if(hash === 3655393761){
+                return "Titan"
+            }
+        }
+    });
+  </script>
+</dom-module>
