@@ -103,8 +103,7 @@
                      <character-selection charid="[[item]]" memid="[[membershipId]]" selchar="{{selectedChar}}"></character-selection>
                  </template>
              </div>
-             <template is="dom-if" if="{{selectedChar}}">
-                 <iron-ajax
+            <iron-ajax
                             id="findChars"
                             url='https://www.bungie.net/Platform/Destiny2/2/Profile/[[membershipId]]/Character/[[selectedChar]]'
                             params='{"components":"200"}'
@@ -112,6 +111,8 @@
                             method="get"
                             handle-as="json"
                             last-response='{{jsonStats}}'></iron-ajax>
+             <template is="dom-if" if="{{selectedChar}}">
+                
                  <div class="body">
                      <div id="leftStats">
                          <div class="statSet">
