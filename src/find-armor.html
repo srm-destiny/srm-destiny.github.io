@@ -15,7 +15,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/paper-toolbar/paper-toolbar.html">
 <link rel="import" href="../bower_components/iron-icons/iron-icons.html">
 <link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
-<link rel="import" href="../bower_components/dom-repeat-n/dom-repeat-n.html">
+<link rel="import" href="../bower_components/iron-list/iron-list.html">
+<link rel="import" href="../bower_components/iron-scroll-threshold/iron-scroll-threshold.html">
 <link rel="import" href="../src/item-cards.html">
 
 <dom-module id="find-armor" class="layout">
@@ -99,25 +100,39 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         .input{
             width:75px;
         }
+        iron-list{
+            height:calc(100vh - 116px);
+            width:100vw;
+        }
+        item-card{
+            display:inline-block;
+        }
+        #scroll{
+            height:80vh;
+        }
     </style>
-      <iron-ajax auto
-                 url='hunter.json'
+      <iron-ajax id="armorRequest"
+                 url='src/hunter.json'
                  handle-as="json"
                  last-response='{{data}}'>
       </iron-ajax>      
       <div class="item-container">
-              <template id="repeat" is="dom-repeat" items="{{dataSet}}">
-                  <item-card helmet="{{item.helmet}}"
-                             helmet-perk="{{item.helmetPerk}}"
-                             arm="{{item.arm}}"
-                             arm-perk="{{item.armPerk}}"
-                             chest="{{item.chest}}"
-                             chest-perk="{{item.chestPerk}}"
-                             leg="{{item.leg}}"
-                             leg-perk="{{item.legPerk}}">
-                  </item-card>
-              </template>
-          <h1 id="nothing" style="display:none;">Hmmm.. couldn't find any matches.</h1>
+          <div id="items" style="display:none;">
+              <iron-scroll-threshold id="scroll" lower-threshold="100" on-lower-threshold="loadMoreData">
+                  <template id="repeat" is="dom-repeat" items="{{dataSet}}">
+                      <item-card helmet="{{item.listing.helmet}}"
+                                 helmet-perk="{{item.listing.helmetPerk}}"
+                                 arm="{{item.listing.arm}}"
+                                 arm-perk="{{item.listing.armPerk}}"
+                                 chest="{{item.listing.chest}}"
+                                 chest-perk="{{item.listing.chestPerk}}"
+                                 leg="{{item.listing.leg}}"
+                                 leg-perk="{{item.listing.legPerk}}">
+                      </item-card>
+                  </template>
+              </iron-scroll-threshold>
+          </div>
+          <h1 id="nothing" style="display:none;">{{errorString}}</h1>
       </div>
   </template>
 
@@ -127,63 +142,94 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         properties: {
             resilience: {
                 type: Number,
+                notify:true
                 //observer: "_checkResilience"
             },
             recovery: {
                 type: Number,
+                notify:true
                 //observer: "_checkRecovery"
             },
             mobility: {
                 type: Number,
-                observer: "_runSearch"
+                notify:true
             },
             data: {
-                type: Object
+                type: Object,
+                notify:true,
+                observer: '_runSearch'
             },
             dataSet: {
                 type: Array,
-                value: "[]",
+                value: function() { return []; }
                 
             },
             dataSet2: {
                 type: Array,
-                value: "[]",
-                notify: true
+                value: function() { return []; },
+                observer: 'showData'
             },
-            screenshot:{
-                value: "{{item.arm.displayProperties.screenshot}}"
+            dataLimit: {
+                type: Number,
+                value: 8
+            },
+            currentIndex:{
+                type: Number,
+                value: 8
+            },
+            limitIndex:{
+                type: Number,
+                value: 12
+            },
+            errorString:{
+                type: String,
+                notify:true
             }
         },
-        loadMore: function() {
-            ironScrollTheshold.clearTriggers();
+        loadMoreData:function(){
+            if(this.dataSet2.length == undefined){
+                return
+            } else{
+                if(this.limitIndex <= this.dataSet2.length){
+                    for(i = this.currentIndex; i < this.limitIndex; i++){
+                        this.currentIndex = i;
+                        this.push('dataSet', {listing: this.dataSet2[i]});  
+                    }
+                    this.limitIndex = this.limitIndex + 5;
+                    this.$.scroll.clearTriggers();
+                }else{
+                    for(i = this.currentIndex; i < this.dataSet2.length - 1; i++){
+                        this.currentIndex = i;
+                        this.push('dataSet', {listing: this.dataSet2[i]});  
+                    }
+                }
+            }
         },
         showData: function(){
-            data = this.dataSet
-            seen = this.dataSet;
-            seen2 = [];
-            for(var listing in data){
-                for(var seening in seen){
-                    if(data[listing] == seen[seening]){
-                        console.log("already in... removing");
-                        delete data[listing]
-                    } else{
-                        seen2.push(seen[seening])
-                    }
-                }    
+            dataCap = [];
+            this.splice('dataSet', 0, this.dataSet.length);
+            if(this.dataSet2.length == 0){
+                return;
+            } else{
+                for(i=0;i < this.dataLimit; i++){
+                    this.push('dataSet', {
+                        listing: this.dataSet2[i]
+                    })   
+                   
+                }
+                this.$.scroll.clearTriggers();
             }
-            this.dataSet2 = seen2;
-            console.log(this.dataSet2)
+        },
+        _runAjax: function(){
+            this.$.armorRequest.generateRequest();
         },
         _runSearch: function(){
-            mobility = this.mobility;
-            resilience = this.resilience;
-            recovery = this.recovery;
             dataSet = [];
+            this.splice('dataSet2', 0, this.dataSet2.length);
             for (var helmet in this.data.helmets){
                 //Iterate through all helmets
                 for(var helmetsperks in this.data.helmets[helmet].perkSets){  
                     //Iterate through each helmet perk tree
-                    console.log()
                     hm = this.data.helmets[helmet].perkSets[helmetsperks].mobility;
                     hr = this.data.helmets[helmet].perkSets[helmetsperks].resilience;
                     hry = this.data.helmets[helmet].perkSets[helmetsperks].recovery;
@@ -225,11 +271,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                                                             leg: this.data.legs[leg], 
                                                             legPerk: this.data.legs[leg].perkSets[legsperks].name
                                                         })
-                                                        this.$.nothing.style.display = "none"
-                                                    } 
+                                                        this.$.nothing.style.display = "none";
+                                                        this.$.items.style.display = "block";
+                                                    }
                                                 }
-                                            }else{
-                                                this.$.nothing.style.display = "block"
                                             }
                                         }
                                     }
@@ -240,18 +285,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 }
                 
             }
-            this.dataSet = dataSet
-            this.$.repeat.domChange
-        }
-        
-         /*if(hm + am == answer){
-                                console.log("Helmet: " + this.data.helmets[helmet].displayProperties.name)
-                                console.log("Arm: " + this.data.arms[arm].displayProperties.name)
-                                console.log("Set Found. Total Mobility: " + (hm + am));
-                                console.log("");
-                                console.log("")
-                            }
-        */
+            if(dataSet.length == 0){
+                this.errorString = "Nothing found";
+                this.$.nothing.style.display = "block";
+            }
+            this.limitIndex = 12;
+            this.currentIndex = 8;
+            this.dataSet2 = dataSet;
+        },
     });
   </script>
 </dom-module>
