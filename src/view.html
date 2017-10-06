@@ -137,18 +137,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           
       </paper-toolbar>
        <paper-toolbar class="minibar">
-           <a href="#" on-tap="showResilence" slot="top" class="sub-title" style="margin-right:10px;">Time to Kill</a>
-           <a href="#" on-tap="showArmor" slot="top" class="sub-title">Find Armor</a>
+          <!-- <a href="#" on-tap="showResilence" slot="top" class="sub-title" style="margin-right:10px;">Time to Kill</a>
+           <a href="#" on-tap="showArmor" slot="top" class="sub-title">Find Armor</a> -->
       </paper-toolbar>
       
-      <resilence-stat character="{{character}}" 
+      <!--<resilence-stat character="{{character}}" 
                       id="resilence" 
                       style="display:none">
-      </resilence-stat>
+      </resilence-stat> -->
       <find-armor mobility="{{mobility}}"
                   resilience="{{resilience}}"
                   recovery="{{recovery}}"
-                  id="armor" style="display:none"></find-armor>
+                  id="armor" style="display:block"></find-armor>
   </template>
 
   <script>
@@ -189,11 +189,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             },
             characterSearch: {
                 type: Boolean,
-                value: true,
+                value: false,
                 notify:true
             },
             armorSearch: {
                 type: Boolean,
+                value: true,
                 notify: true
             }
         },
